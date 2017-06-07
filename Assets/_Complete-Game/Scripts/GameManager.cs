@@ -136,7 +136,7 @@ namespace Completed
 		public void GameOver()
 		{
 			//Set levelText to display number of levels passed and game over message
-			levelText.text = "After " + level + " days, you suffered from a lack of chemical nourishment.";
+			levelText.text = "At lab " + level + " you DIED.";
 			
 			//Enable black background image gameObject.
 			levelImage.SetActive(true);

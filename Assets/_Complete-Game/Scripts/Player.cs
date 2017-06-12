@@ -13,6 +13,7 @@ namespace Completed
 		public int pointsPerSoda = 20;				//Number of points to add to player food points when picking up a soda object.
 		public int wallDamage = 1;					//How much damage a player does to a wall when chopping it.
 		public Text foodText;						//UI Text to display current player food total.
+		public Text itemPickupText;
 		public AudioClip moveSound1;				//1 of 2 Audio clips to play when player moves.
 		public AudioClip moveSound2;				//2 of 2 Audio clips to play when player moves.
 		public AudioClip eatSound1;					//1 of 2 Audio clips to play when player collects a food object.
@@ -39,6 +40,7 @@ namespace Completed
 			
 			//Set the foodText to reflect the current player food total.
 			foodText.text = "Oxygen: " + food;
+			itemPickupText.text = "Inventory: \n";
 			
 			//Call the Start function of the MovingObject base class.
 			base.Start ();
@@ -193,7 +195,8 @@ namespace Completed
 				
 				//Update foodText to represent current total and notify player that they gained points
 				foodText.text = "+" + pointsPerFood + " Food: " + food;
-				
+				itemPickupText.text += " HOLY SHIT YOU \n YOU GOT OXYGEN";
+
 				//Call the RandomizeSfx function of SoundManager and pass in two eating sounds to choose between to play the eating sound effect.
 				SoundManager.instance.RandomizeSfx (eatSound1, eatSound2);
 				

@@ -145,7 +145,13 @@ namespace Completed
 			
 			//Determine number of enemies based on current level number, based on a logarithmic progression
 			int enemyCount = (int)Mathf.Log(level, 2f);
-			
+
+			if (level == 3) {
+				enemyCount = 30;
+			} else {
+				enemyCount = (int)Mathf.Log (level, 2f);
+			}
+
 			//Instantiate a random number of enemies based on minimum and maximum, at randomized positions.
 			LayoutObjectAtRandom (enemyTiles, enemyCount, enemyCount);
 			

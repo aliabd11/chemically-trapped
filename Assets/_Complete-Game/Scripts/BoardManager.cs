@@ -146,8 +146,9 @@ namespace Completed
 			//Determine number of enemies based on current level number, based on a logarithmic progression
 			int enemyCount = (int)Mathf.Log(level, 2f);
 
-			if (level == 3) {
-				enemyCount = 30;
+			if (level % 3 == 0) { //Boss Levels
+                int numAddedEnemies = (int) (level / 3);
+				enemyCount = 4 + numAddedEnemies;
 			} else {
 				enemyCount = (int)Mathf.Log (level, 2f);
 			}

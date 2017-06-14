@@ -9,8 +9,9 @@ namespace Completed
 	public class Player : MovingObject
 	{
 		public float restartLevelDelay = 1f;		//Delay time in seconds to restart level.
-		public int pointsPerFood = 8;				//Number of points to add to player food points when picking up a food object.
-		public int pointsPerSoda = 1;				//Number of points to add to player food points when picking up a soda object.
+		public int pointsPerHydrogen = 1;           //Number of points to add to player food points when picking up a soda object.
+        public int pointsPerOxygen = 8;				//Number of points to add to player food points when picking up a food object.
+		
 		public int wallDamage = 1;					//How much damage a player does to a wall when chopping it.
 		public Text foodText;						//UI Text to display current player food total.
 		public Text itemPickupText;
@@ -197,35 +198,16 @@ namespace Completed
 				//Disable the player object since level is over.
 				enabled = false;
 			}
-			
-			//Check if the tag of the trigger collided with is Food.
-			else if(other.tag == "Food")
-			{
-				//Add pointsPerFood to the players current food total.
-				food += pointsPerFood;
-                numOxygen++;
 
-				//Update foodText to represent current total and notify player that they gained points
-				foodText.text = "Oxigen: +" + pointsPerFood + " Energy: " + food;
-				itemPickupText.text = "Item Pickup Details: \n You got oxygen! \n\n Crucial part to life as we know it \n Chemical symbol: O \n Atomic number: 8 \n Third-most abundant element in the universe";
-                inventoryText.text = "Chemical Inventory: \n" + "Hydrogen: " + numHydrogen + "\n" + "Oxygen: " + numOxygen + "\n";
-
-                //Call the RandomizeSfx function of SoundManager and pass in two eating sounds to choose between to play the eating sound effect.
-                SoundManager.instance.RandomizeSfx (eatSound1, eatSound2);
-				
-				//Disable the food object the player collided with.
-				other.gameObject.SetActive (false);
-			}
-			
 			//Check if the tag of the trigger collided with is Soda.
-			else if(other.tag == "Soda")
+			else if(other.tag == "Hydrogen")
 			{
-				//Add pointsPerSoda to players food points total
-				food += pointsPerSoda;
+				//Add pointsPerHydrogen to players food points total
+				food += pointsPerHydrogen;
                 numHydrogen++;
 				
 				//Update foodText to represent current total and notify player that they gained points
-				foodText.text = "Hydrogen: +" + pointsPerSoda + " Energy: " + food;
+				foodText.text = "Hydrogen: +" + pointsPerHydrogen + " Energy: " + food;
 				itemPickupText.text = "Item Pickup Details: \n You got hydrogen! \n\n Remember the Hindenburg? \n Chemical symbol: H \n Atomic number: 1 \n Lightest element on the periodic table";
                 inventoryText.text = "Chemical Inventory: \n" + "Hydrogen: " + numHydrogen + "\n" + "Oxygen: " + numOxygen + "\n";
 
@@ -235,6 +217,26 @@ namespace Completed
 				//Disable the soda object the player collided with.
 				other.gameObject.SetActive (false);
 			}
+
+			//Check if the tag of the trigger collided with is Food.
+			else if(other.tag == "Oxygen")
+			{
+				//Add pointsPerOxygen to the players current food total.
+				food += pointsPerOxygen;
+                numOxygen++;
+
+				//Update foodText to represent current total and notify player that they gained points
+				foodText.text = "Oxigen: +" + pointsPerOxygen + " Energy: " + food;
+				itemPickupText.text = "Item Pickup Details: \n You got oxygen! \n\n Crucial part to life as we know it \n Chemical symbol: O \n Atomic number: 8 \n Third-most abundant element in the universe";
+                inventoryText.text = "Chemical Inventory: \n" + "Hydrogen: " + numHydrogen + "\n" + "Oxygen: " + numOxygen + "\n";
+
+                //Call the RandomizeSfx function of SoundManager and pass in two eating sounds to choose between to play the eating sound effect.
+                SoundManager.instance.RandomizeSfx (eatSound1, eatSound2);
+				
+				//Disable the food object the player collided with.
+				other.gameObject.SetActive (false);
+			}			
+			
 		}
 		
 		

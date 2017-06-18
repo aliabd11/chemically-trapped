@@ -50,7 +50,7 @@ namespace Completed
 			//Set the foodText to reflect the current player food total.
 			foodText.text = "Energy: " + food;
 			itemPickupText.text = "Item Pickup Details: \n";
-            inventoryText.text = "Chemical Inventory: \n" + "Hydrogen: " + numHydrogen + "\n" + "Oxygen: " + numOxygen + "\n";
+            inventoryText.text = "Chemical \n Inventory: \n" + "Hydrogen: " + numHydrogen + "\n" + "Oxygen: " + numOxygen + "\n";
 			
 			//Call the Start function of the MovingObject base class.
 			base.Start ();
@@ -209,7 +209,7 @@ namespace Completed
 				//Update foodText to represent current total and notify player that they gained points
 				foodText.text = "Hydrogen: +" + pointsPerHydrogen + " Energy: " + food;
 				itemPickupText.text = "Item Pickup Details: \n You got hydrogen! \n\n Remember the Hindenburg? \n Chemical symbol: H \n Atomic number: 1 \n Lightest element on the periodic table";
-                inventoryText.text = "Chemical Inventory: \n" + "Hydrogen: " + numHydrogen + "\n" + "Oxygen: " + numOxygen + "\n";
+                inventoryText.text = "Chemical \n Inventory: \n" + "Hydrogen: " + numHydrogen + "\n" + "Oxygen: " + numOxygen + "\n";
 
                 //Call the RandomizeSfx function of SoundManager and pass in two drinking sounds to choose between to play the drinking sound effect.
                 SoundManager.instance.RandomizeSfx (drinkSound1, drinkSound2);

@@ -16,7 +16,8 @@ namespace Completed
 		public Text foodText;						//UI Text to display current player food total.
 		public Text itemPickupText;
         public Text inventoryText;
-       
+		public Text playerNotice;						//UI Text to display current player food total.
+	       
 
 		public AudioClip moveSound1;				//1 of 2 Audio clips to play when player moves.
 		public AudioClip moveSound2;				//2 of 2 Audio clips to play when player moves.
@@ -51,7 +52,6 @@ namespace Completed
 			foodText.text = "Energy: " + food;
 			itemPickupText.text = "Item Pickup Details: \n";
             inventoryText.text = "Chemical \n Inventory: \n" + "Hydrogen: " + numHydrogen + "\n" + "Oxygen: " + numOxygen + "\n";
-			
 			//Call the Start function of the MovingObject base class.
 			base.Start ();
 		}
@@ -184,7 +184,7 @@ namespace Completed
 			//Set the attack trigger of the player's animation controller in order to play the player's attack animation.
 			animator.SetTrigger ("playerChop");
 		}
-		
+
 		
 		//OnTriggerEnter2D is sent when another object enters a trigger collider attached to this object (2D physics only).
 		private void OnTriggerEnter2D (Collider2D other)
@@ -192,11 +192,16 @@ namespace Completed
 			//Check if the tag of the trigger collided with is Exit.
 			if(other.tag == "Exit")
 			{
-				//Invoke the Restart function to start the next level with a delay of restartLevelDelay (default 1 second).
-				Invoke ("Restart", restartLevelDelay);
+				if (GameManager.instance.level == 2) {
+					playerNotice.text = "THE BOSS IS STILL ALIVE \n YOU SHALL NOT LEAVE";
+					//upon boss death, then allow player to leave
+				} else {
+					//Invoke the Restart function to start the next level with a delay of restartLevelDelay (default 1 second).
+					Invoke ("Restart", restartLevelDelay);
 				
-				//Disable the player object since level is over.
-				enabled = false;
+					//Disable the player object since level is over.
+					enabled = false;
+				}
 			}
 
 			//Check if the tag of the trigger collided with is Soda.
@@ -228,7 +233,7 @@ namespace Completed
 				//Update foodText to represent current total and notify player that they gained points
 				foodText.text = "Oxigen: +" + pointsPerOxygen + " Energy: " + food;
 				itemPickupText.text = "Item Pickup Details: \n You got oxygen! \n\n Crucial part to life as we know it \n Chemical symbol: O \n Atomic number: 8 \n Third-most abundant element in the universe";
-                inventoryText.text = "Chemical Inventory: \n" + "Hydrogen: " + numHydrogen + "\n" + "Oxygen: " + numOxygen + "\n";
+                inventoryText.text = "Chemical \n Inventory: \n" + "Hydrogen: " + numHydrogen + "\n" + "Oxygen: " + numOxygen + "\n";
 
                 //Call the RandomizeSfx function of SoundManager and pass in two eating sounds to choose between to play the eating sound effect.
                 SoundManager.instance.RandomizeSfx (eatSound1, eatSound2);

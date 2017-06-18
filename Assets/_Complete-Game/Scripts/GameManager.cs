@@ -22,7 +22,7 @@ namespace Completed
 		private Text bossText;
 		private GameObject levelImage;							//Image to block out level as levels are being set up, background for levelText.
 		private BoardManager boardScript;						//Store a reference to our BoardManager which will set up the level.
-		private int level = 1;									//Current level number, expressed in game as "Day 1".
+		public int level = 1;									//Current level number, expressed in game as "Day 1".
 		private List<Enemy> enemies;							//List of all Enemy units, used to issue them move commands.
 		private bool enemiesMoving;								//Boolean to check if enemies are moving.
 		private bool doingSetup = true;							//Boolean to check if we're setting up board, prevent Player from moving during setup.
@@ -81,9 +81,12 @@ namespace Completed
 				bossText = GameObject.Find ("BossBattleText").GetComponent<Text> ();
 				bossText.text = "DEFEAT THE BOSS:\n\n MR. RED LITMUS AND MR. BLUE LITMUS  HAS BEEN UNLEASHED. " +
 				"LAUNCH THE RIGHT ATTACKS TO TAKE HIM DOWN. \n\n(HINT: TO DEFEAT, USE pH to CHANGE ITS COLOUR)";
+
+				//Spawn only Mr. Red Litmus and Mr. Blue Litmus
+
 			} else {
 				bossText = GameObject.Find ("BossBattleText").GetComponent<Text> ();
-				int levelsleft = 3 - instance.level;
+				int levelsleft = 2 - instance.level;
 				string levelslefttext = levelsleft.ToString ();
 				bossText.text = "The boss shall appear in " + levelslefttext + " more levels";
 			}

@@ -77,7 +77,7 @@ namespace Completed
 		//Initializes the game for each level.
 		void InitGame()
 		{				
-			if (instance.level == 2) {
+			if (instance.level == 3) {
 				bossText = GameObject.Find ("BossBattleText").GetComponent<Text> ();
 				bossText.text = "DEFEAT THE BOSS:\n\n MR. RED LITMUS AND MR. BLUE LITMUS  HAS BEEN UNLEASHED. " +
 				"LAUNCH THE RIGHT ATTACKS TO TAKE HIM DOWN. \n\n(HINT: TO DEFEAT, USE pH to CHANGE ITS COLOUR)";
@@ -86,7 +86,7 @@ namespace Completed
 
 			} else {
 				bossText = GameObject.Find ("BossBattleText").GetComponent<Text> ();
-				int levelsleft = 2 - instance.level;
+				int levelsleft = 3 - instance.level;
 				string levelslefttext = levelsleft.ToString ();
 				bossText.text = "The boss shall appear in " + levelslefttext + " more levels";
 			}
@@ -153,7 +153,8 @@ namespace Completed
 		{
 			//Set levelText to display number of levels passed and game over message
 			levelText.text = "At lab " + level + " you DIED.";
-			
+			Invoke("HideLevelImage", levelStartDelay);
+
 			//Enable black background image gameObject.
 			levelImage.SetActive(true);
 			

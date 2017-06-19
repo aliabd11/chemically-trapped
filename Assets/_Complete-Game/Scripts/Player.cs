@@ -192,7 +192,7 @@ namespace Completed
 			//Check if the tag of the trigger collided with is Exit.
 			if(other.tag == "Exit")
 			{
-				if (GameManager.instance.level == 2) {
+				if (GameManager.instance.level == 3) {
 					playerNotice.text = "THE BOSS IS STILL ALIVE \n YOU SHALL NOT LEAVE";
 					//upon boss death, then allow player to leave
 				} else {

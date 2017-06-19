@@ -84,7 +84,13 @@ namespace Completed
 
 				//Spawn only Mr. Red Litmus and Mr. Blue Litmus
 
-			} else {
+			} else if (instance.level == 6) {
+				bossText = GameObject.Find ("BossBattleText").GetComponent<Text> ();
+				bossText.text = "DEFEAT THE BOSS:\n\n MR. O IS ANGRY AND READY TO RUMBLE." +
+				"LAUNCH THE RIGHT ATTACKS TO TAKE HIM DOWN. \n\n(HINT: THE RIGHT BOND WILL CHANGE HIM)";
+			}
+
+			else {
 				bossText = GameObject.Find ("BossBattleText").GetComponent<Text> ();
 				int levelsleft = 3 - instance.level;
 				string levelslefttext = levelsleft.ToString ();

@@ -11,7 +11,7 @@ namespace Completed
 		public float restartLevelDelay = 1f;		//Delay time in seconds to restart level.
 		public int pointsPerHydrogen = 1;           //Number of points to add to player food points when picking up a soda object.
         public int pointsPerOxygen = 8;				//Number of points to add to player food points when picking up a food object.
-		
+		public bool press_down;
 		public int wallDamage = 1;					//How much damage a player does to a wall when chopping it.
 		public Text foodText;						//UI Text to display current player food total.
 		public Text itemPickupText;
@@ -51,7 +51,7 @@ namespace Completed
 			//Set the foodText to reflect the current player food total.
 			foodText.text = "Energy: " + food;
 			itemPickupText.text = "Item Pickup Details: \n";
-            inventoryText.text = "Chemical \n Inventory: \n" + "Hydrogen: " + numHydrogen + "\n" + "Oxygen: " + numOxygen + "\n";
+            inventoryText.text = "Chemical \n Inventory: \n" + "Nitrogen: " + numHydrogen + "\n" + "Plutonium: " + numOxygen + "\n";
 			//Call the Start function of the MovingObject base class.
 			base.Start ();
 		}
@@ -83,7 +83,12 @@ namespace Completed
 			
 			//Get input from the input manager, round it to an integer and store in vertical to set y axis move direction
 			vertical = (int) (Input.GetAxisRaw ("Vertical"));
-			
+
+			if (Input.GetKeyDown(KeyCode.F))
+			{
+				press_down = true;
+			}
+
 			//Check if moving horizontally, if so set vertical to zero.
 			if(horizontal != 0)
 			{
@@ -208,38 +213,44 @@ namespace Completed
 			else if(other.tag == "Hydrogen")
 			{
 				//Add pointsPerHydrogen to players food points total
-				food += pointsPerHydrogen;
-                numHydrogen++;
+				if (press_down) {
+					food += pointsPerHydrogen;
+					numOxygen++;
+					other.gameObject.SetActive (false);
+					foodText.text = "Hydrogen: +" + pointsPerHydrogen + " Energy: " + food;
+					press_down = false;
+				}
 				
 				//Update foodText to represent current total and notify player that they gained points
-				foodText.text = "Hydrogen: +" + pointsPerHydrogen + " Energy: " + food;
-				itemPickupText.text = "Item Pickup Details: \n You got hydrogen! \n\n Remember the Hindenburg? \n Chemical symbol: H \n Atomic number: 1 \n Lightest element on the periodic table";
-                inventoryText.text = "Chemical \n Inventory: \n" + "Hydrogen: " + numHydrogen + "\n" + "Oxygen: " + numOxygen + "\n";
+				itemPickupText.text = "Item Pickup Details: \n This is plutonium! \n Chemical symbol: H \n Atomic number: 94 \n PRIMARY ISOTOPE USED FOR NUCLEAR WEAPONS. \n\n Press 'f' to pick up the item";
+				inventoryText.text = "Chemical \n Inventory: \n" + "Nitrogen: " + numHydrogen + "\n" + "Plutonium: " + numOxygen + "\n";
 
                 //Call the RandomizeSfx function of SoundManager and pass in two drinking sounds to choose between to play the drinking sound effect.
                 SoundManager.instance.RandomizeSfx (drinkSound1, drinkSound2);
 				
 				//Disable the soda object the player collided with.
-				other.gameObject.SetActive (false);
 			}
 
 			//Check if the tag of the trigger collided with is Food.
 			else if(other.tag == "Oxygen")
 			{
 				//Add pointsPerOxygen to the players current food total.
-				food += pointsPerOxygen;
-                numOxygen++;
+				if (press_down) {
+					food += pointsPerOxygen;
+					numHydrogen++;
+					other.gameObject.SetActive (false);
+					foodText.text = "Oxygen: +" + pointsPerOxygen + " Energy: " + food;
+					press_down = false;
+				}
 
 				//Update foodText to represent current total and notify player that they gained points
-				foodText.text = "Oxigen: +" + pointsPerOxygen + " Energy: " + food;
-				itemPickupText.text = "Item Pickup Details: \n You got oxygen! \n\n Crucial part to life as we know it \n Chemical symbol: O \n Atomic number: 8 \n Third-most abundant element in the universe";
-                inventoryText.text = "Chemical \n Inventory: \n" + "Hydrogen: " + numHydrogen + "\n" + "Oxygen: " + numOxygen + "\n";
+				itemPickupText.text = "Item Pickup Details: \n This is nitrogen! \n\n Seventh most abundant. \n Chemical symbol: O \n Atomic number: 7 \n Discovered by Daniel Rutherford \n\n Press 'f' to pick up the item";
+				inventoryText.text = "Chemical \n Inventory: \n" + "Nitrogen: " + numHydrogen + "\n" + "Plutonium: " + numOxygen + "\n";
 
                 //Call the RandomizeSfx function of SoundManager and pass in two eating sounds to choose between to play the eating sound effect.
                 SoundManager.instance.RandomizeSfx (eatSound1, eatSound2);
 				
 				//Disable the food object the player collided with.
-				other.gameObject.SetActive (false);
 			}			
 			
 		}

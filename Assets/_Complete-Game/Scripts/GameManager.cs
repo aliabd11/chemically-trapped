@@ -94,7 +94,7 @@ namespace Completed
 				bossText = GameObject.Find ("BossBattleText").GetComponent<Text> ();
 				int levelsleft = 3 - instance.level;
 				string levelslefttext = levelsleft.ToString ();
-				bossText.text = "The boss shall appear in " + levelslefttext + " more levels";
+				bossText.text = "The boss shall appear in " + levelslefttext + " more level(s)";
 			}
 			//While doingSetup is true the player can't move, prevent player from moving while title card is up.
 			doingSetup = true;

@@ -197,16 +197,16 @@ namespace Completed
 			//Check if the tag of the trigger collided with is Exit.
 			if(other.tag == "Exit")
 			{
-				if (GameManager.instance.level == 3) {
-					playerNotice.text = "THE BOSS IS STILL ALIVE \n YOU SHALL NOT LEAVE";
+				//if (GameManager.instance.level == 3) {
+					//playerNotice.text = "THE BOSS IS STILL ALIVE \n YOU SHALL NOT LEAVE";
 					//upon boss death, then allow player to leave
-				} else {
+				//} else {
 					//Invoke the Restart function to start the next level with a delay of restartLevelDelay (default 1 second).
 					Invoke ("Restart", restartLevelDelay);
 				
 					//Disable the player object since level is over.
 					enabled = false;
-				}
+				//}
 			}
 
 			//Check if the tag of the trigger collided with is Soda.
@@ -297,7 +297,12 @@ namespace Completed
 				
 				//Call the GameOver function of GameManager.
 				GameManager.instance.GameOver ();
-			}
+
+                food = GameManager.instance.playerFoodPoints;
+                inventoryText.text = "";
+                itemPickupText.text = "";
+                playerNotice.text = "";
+            }
 		}
 	}
 }

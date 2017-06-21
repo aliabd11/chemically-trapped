@@ -25,12 +25,16 @@ namespace Completed
 		public int level = 1;									//Current level number, expressed in game as "Day 1".
 		private List<Enemy> enemies;							//List of all Enemy units, used to issue them move commands.
 		private bool enemiesMoving;								//Boolean to check if enemies are moving.
-		private bool doingSetup = true;							//Boolean to check if we're setting up board, prevent Player from moving during setup.
-		
-		
-		
-		//Awake is always called before any Start functions
-		void Awake()
+		private bool doingSetup = true;                         //Boolean to check if we're setting up board, prevent Player from moving during setup.
+
+        private bool gameOver;
+        [HideInInspector] public bool restart;
+
+        public Text restartText;
+        private bool firstRun = true;
+
+        //Awake is always called before any Start functions
+        void Awake()
 		{
             //Check if instance already exists
             if (instance == null)
@@ -107,9 +111,14 @@ namespace Completed
 			
 			//Set the text of levelText to the string "Day" and append the current level number.
 			levelText.text = "Lab " + level;
-			
-			//Set levelImage to active blocking player's view of the game board during setup.
-			levelImage.SetActive(true);
+
+            restartText = GameObject.Find("RestartText").GetComponent<Text>();
+            restartText.text = "";
+            restart = false;
+            gameOver = false;
+
+            //Set levelImage to active blocking player's view of the game board during setup.
+            levelImage.SetActive(true);
 			
 			//Call the HideLevelImage function with a delay in seconds of levelStartDelay.
 			Invoke("HideLevelImage", levelStartDelay);
@@ -159,14 +168,26 @@ namespace Completed
 		{
 			//Set levelText to display number of levels passed and game over message
 			levelText.text = "At lab " + level + " you DIED.";
-			Invoke("HideLevelImage", levelStartDelay);
+			//Invoke("HideLevelImage", levelStartDelay);
 
 			//Enable black background image gameObject.
 			levelImage.SetActive(true);
 			
 			//Disable this GameManager.
 			enabled = false;
-		}
+
+
+            gameOver = true;
+
+            restartText.text = "Press 'R' for Restart";
+            restart = true;
+
+            bossText.text = "";
+            
+
+            playerFoodPoints = 100;
+            level = 0;
+        }
 		
 		//Coroutine to move enemies in sequence.
 		IEnumerator MoveEnemies()
@@ -199,6 +220,26 @@ namespace Completed
 			//Enemies are done moving, set enemiesMoving to false.
 			enemiesMoving = false;
 		}
-	}
+
+        public void Restart()
+        {
+            //playerFoodPoints = 100;
+            //level = 1;
+            //levelImage.SetActive(false);
+            enabled = true;
+            restart = false;
+            restartText.text = "";
+
+            //InitGame();
+            //levelText.text = "";
+            SoundManager.instance.musicSource.Play();
+            //boardScript.SetupScene(level);
+            enemies.Clear();
+            //Application.LoadLevel(Application.loadedLevel);
+            UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
+            //Debug.Log("player food points = " + playerFoodPoints);
+            //Debug.Log("level = " + level);
+        }
+    }
 }
 

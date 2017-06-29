@@ -26,7 +26,7 @@ namespace Completed
 		public AudioClip drinkSound1;				//1 of 2 Audio clips to play when player collects a soda object.
 		public AudioClip drinkSound2;				//2 of 2 Audio clips to play when player collects a soda object.
 		public AudioClip gameOverSound;				//Audio clip to play when player dies.
-		
+
 		private Animator animator;					//Used to store a reference to the Player's animator component.
 		private int food;                           //Used to store player food points total during level. 
         private int numOxygen;
@@ -54,6 +54,7 @@ namespace Completed
             inventoryText.text = "Chemical \n Inventory: \n" + "Nitrogen: " + numHydrogen + "\n" + "Plutonium: " + numOxygen + "\n";
 			//Call the Start function of the MovingObject base class.
 			base.Start ();
+
 		}
 		
 		

@@ -20,14 +20,17 @@ namespace Completed
 		
 		private Text levelText;									//Text to display current level number.
 		private Text bossText;
+		public AudioClip newLevelSound;                //Audio clip to play when player dies.
+		public GameObject bossSource;
+
 		private GameObject levelImage;							//Image to block out level as levels are being set up, background for levelText.
 		private BoardManager boardScript;						//Store a reference to our BoardManager which will set up the level.
 		public int level = 1;									//Current level number, expressed in game as "Day 1".
 		private List<Enemy> enemies;							//List of all Enemy units, used to issue them move commands.
 		private bool enemiesMoving;								//Boolean to check if enemies are moving.
 		private bool doingSetup = true;                         //Boolean to check if we're setting up board, prevent Player from moving during setup.
-
         private bool gameOver;
+		public bool explainText = false;
         [HideInInspector] public bool restart;
 
         public Text restartText;
@@ -84,14 +87,17 @@ namespace Completed
 			if (instance.level == 3) {
 				bossText = GameObject.Find ("BossBattleText").GetComponent<Text> ();
 				bossText.text = "DEFEAT THE BOSS:\n\n MR. RED LITMUS AND MR. BLUE LITMUS  HAS BEEN UNLEASHED. " +
-				"LAUNCH THE RIGHT ATTACKS TO TAKE HIM DOWN. \n\n(HINT: TO DEFEAT, USE pH to CHANGE ITS COLOUR)";
+				"LAUNCH THE RIGHT ATTACKS TO TAKE HIM DOWN. \n\n(HINT: TO DEFEAT, USE pH to CHANGE ITS COLOUR) \n + ";
 
 				//Spawn only Mr. Red Litmus and Mr. Blue Litmus
 
-			} else if (instance.level == 6) {
+				//SoundManager.instance.musicSource.Stop();
+				//bossSource.GetComponent<AudioSource> ().Play ();
+
+			} else if (instance.level == 4) {
 				bossText = GameObject.Find ("BossBattleText").GetComponent<Text> ();
 				bossText.text = "DEFEAT THE BOSS:\n\n MR. O IS ANGRY AND READY TO RUMBLE." +
-				"LAUNCH THE RIGHT ATTACKS TO TAKE HIM DOWN. \n\n(HINT: THE RIGHT BOND WILL CHANGE HIM)";
+				"(HINT: THE RIGHT BOND WILL CHANGE HIM)";
 			}
 
 			else {
@@ -100,36 +106,46 @@ namespace Completed
 				string levelslefttext = levelsleft.ToString ();
 				bossText.text = "The boss shall appear in " + levelslefttext + " more level(s)";
 			}
+
 			//While doingSetup is true the player can't move, prevent player from moving while title card is up.
 			doingSetup = true;
 			
 			//Get a reference to our image LevelImage by finding it by name.
-			levelImage = GameObject.Find("LevelImage");
+			levelImage = GameObject.Find ("LevelImage");
 			
 			//Get a reference to our text LevelText's text component by finding it by name and calling GetComponent.
-			levelText = GameObject.Find("LevelText").GetComponent<Text>();
+			levelText = GameObject.Find ("LevelText").GetComponent<Text> ();
 			
 			//Set the text of levelText to the string "Day" and append the current level number.
 			levelText.text = "Lab " + level;
 
-            restartText = GameObject.Find("RestartText").GetComponent<Text>();
-            restartText.text = "";
-            restart = false;
-            gameOver = false;
+			restartText = GameObject.Find ("RestartText").GetComponent<Text> ();
+			restartText.text = "";
+			restart = false;
+			gameOver = false;
 
-            //Set levelImage to active blocking player's view of the game board during setup.
-            levelImage.SetActive(true);
-			
+			//Set levelImage to active blocking player's view of the game board during setup.
+			levelImage.SetActive (true);
+
 			//Call the HideLevelImage function with a delay in seconds of levelStartDelay.
-			Invoke("HideLevelImage", levelStartDelay);
-			
+			if (instance.level == 3) {
+				Invoke ("HideLevelImage", 8);
+			}
+			else if (instance.level == 4) {
+				Invoke ("HideLevelImage", 10);
+			}
+			else {
+				Invoke ("HideLevelImage", levelStartDelay);
+			}
+
 			//Clear any Enemy objects in our List to prepare for next level.
-			enemies.Clear();
+			enemies.Clear ();
 			
 			//Call the SetupScene function of the BoardManager script, pass it current level number.
-			boardScript.SetupScene(level);
-			
+			boardScript.SetupScene (level);
+
 		}
+
 		
 		
 		//Hides black image used between levels
@@ -153,6 +169,7 @@ namespace Completed
 			
 			//Start moving enemies.
 			StartCoroutine (MoveEnemies ());
+
 		}
 		
 		//Call this to add the passed in Enemy to the List of Enemy objects.

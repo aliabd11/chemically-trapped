@@ -3,7 +3,7 @@ using System.Collections;
 
 namespace Completed
 {
-	public class Wall : MonoBehaviour
+	public class Wall : MonoBehaviour, IAttackable
 	{
 		public AudioClip chopSound1;				//1 of 2 audio clips that play when the wall is attacked by the player.
 		public AudioClip chopSound2;				//2 of 2 audio clips that play when the wall is attacked by the player.
@@ -22,7 +22,7 @@ namespace Completed
 		
 		
 		//DamageWall is called when the player attacks a wall.
-		public void DamageWall (int loss)
+		public void Attack (int loss)
 		{
 			//Call the RandomizeSfx function of SoundManager to play one of two chop sounds.
 			SoundManager.instance.RandomizeSfx (chopSound1, chopSound2);

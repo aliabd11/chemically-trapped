@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 namespace Completed
 {
 	//Player inherits from MovingObject, our base class for objects that can move, Enemy also inherits from this.
-	public class Player : MovingObject
+	public class Player : MovingObject, IAttackable
 	{
 		public float restartLevelDelay = 1f;		//Delay time in seconds to restart level.
 		public int pointsPerHydrogen = 1;           //Number of points to add to player food points when picking up a soda object.
@@ -141,7 +141,9 @@ namespace Completed
 			{
 				//Call AttemptMove passing in the generic parameter Wall, since that is what Player may interact with if they encounter one (by attacking it)
 				//Pass in horizontal and vertical as parameters to specify the direction to move Player in.
-				AttemptMove<Wall> (horizontal, vertical);
+				//AttemptMove<Wall> (horizontal, vertical);
+				AttemptMove<IAttackable>(horizontal, vertical);
+
 			}
 		}
 		
@@ -181,13 +183,18 @@ namespace Completed
 		protected override void OnCantMove <T> (T component)
 		{
 			//Set hitWall to equal the component passed in as a parameter.
-			Wall hitWall = component as Wall;
-			
+			//Wall hitWall = component as Wall;
+			IAttackable hitObject = component as IAttackable;
+
 			//Call the DamageWall function of the Wall we are hitting.
-			hitWall.DamageWall (wallDamage);
+			hitObject.Attack (wallDamage);
 			
 			//Set the attack trigger of the player's animation controller in order to play the player's attack animation.
 			animator.SetTrigger ("playerChop");
+
+			//string otherName = hitObject.GetName();
+			//messageText.text += System.Environment.NewLine + "Dealt " + damage + " to a " + otherName + "!";
+
 		}
 
 		
@@ -267,7 +274,7 @@ namespace Completed
 		
 		//LoseFood is called when an enemy attacks the player.
 		//It takes a parameter loss which specifies how many points to lose.
-		public void LoseFood (int loss)
+		public void Attack (int loss)
 		{
 			//Set the trigger for the player animator to transition to the playerHit animation.
 			animator.SetTrigger ("playerHit");

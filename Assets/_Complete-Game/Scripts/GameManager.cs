@@ -27,6 +27,8 @@ namespace Completed
 		private BoardManager boardScript;						//Store a reference to our BoardManager which will set up the level.
 		public int level = 1;									//Current level number, expressed in game as "Day 1".
 		private List<Enemy> enemies;							//List of all Enemy units, used to issue them move commands.
+		private List<BossOneEnemy> bossenemies;					//List of all Boss Enemy units, used to issue them move commands.
+
 		private bool enemiesMoving;								//Boolean to check if enemies are moving.
 		private bool doingSetup = true;                         //Boolean to check if we're setting up board, prevent Player from moving during setup.
         private bool gameOver;
@@ -56,7 +58,8 @@ namespace Completed
 			
 			//Assign enemies to a new List of Enemy objects.
 			enemies = new List<Enemy>();
-			
+			bossenemies = new List<BossOneEnemy> ();
+
 			//Get a component reference to the attached BoardManager script
 			boardScript = GetComponent<BoardManager>();
 			
@@ -129,10 +132,10 @@ namespace Completed
 
 			//Call the HideLevelImage function with a delay in seconds of levelStartDelay.
 			if (instance.level == 3) {
-				Invoke ("HideLevelImage", 8);
+				Invoke ("HideLevelImage", 6);
 			}
 			else if (instance.level == 4) {
-				Invoke ("HideLevelImage", 10);
+				Invoke ("HideLevelImage", 7);
 			}
 			else {
 				Invoke ("HideLevelImage", levelStartDelay);
@@ -140,7 +143,8 @@ namespace Completed
 
 			//Clear any Enemy objects in our List to prepare for next level.
 			enemies.Clear ();
-			
+			bossenemies.Clear ();
+
 			//Call the SetupScene function of the BoardManager script, pass it current level number.
 			boardScript.SetupScene (level);
 
@@ -178,6 +182,14 @@ namespace Completed
 			//Add Enemy to List enemies.
 			enemies.Add(script);
 		}
+
+		public void AddBossToList(BossOneEnemy script)
+		{
+			//Add Enemy to List enemies.
+			bossenemies.Add(script);
+		}
+
+
 		
 		
 		//GameOver is called when the player reaches 0 food points

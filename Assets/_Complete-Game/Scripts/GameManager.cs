@@ -26,7 +26,7 @@ namespace Completed
 		private GameObject levelImage;							//Image to block out level as levels are being set up, background for levelText.
 		private BoardManager boardScript;						//Store a reference to our BoardManager which will set up the level.
 		public int level = 1;									//Current level number, expressed in game as "Day 1".
-		private List<Enemy> enemies;							//List of all Enemy units, used to issue them move commands.
+		public List<Enemy> enemies;							//List of all Enemy units, used to issue them move commands.
 		private List<BossOneEnemy> bossenemies;					//List of all Boss Enemy units, used to issue them move commands.
 
 		private bool enemiesMoving;								//Boolean to check if enemies are moving.
@@ -87,6 +87,7 @@ namespace Completed
 		//Initializes the game for each level.
 		void InitGame()
 		{				
+
 			if (instance.level == 3) {
 				bossText = GameObject.Find ("BossBattleText").GetComponent<Text> ();
 				bossText.text = "DEFEAT THE BOSS:\n\n MR. RED LITMUS AND MR. BLUE LITMUS  HAS BEEN UNLEASHED. " +
@@ -94,22 +95,39 @@ namespace Completed
 
 				//Spawn only Mr. Red Litmus and Mr. Blue Litmus
 
-				//SoundManager.instance.musicSource.Stop();
-				//bossSource.GetComponent<AudioSource> ().Play ();
+				SoundManager.instance.musicSource.Pause(); // Play Boss Music
+				GameObject soundObject = GameObject.Find ("boss_music");
+				AudioSource audioSource = soundObject.GetComponent<AudioSource> ();
+				audioSource.Play ();
 
-			} else if (instance.level == 4) {
+			} else if (instance.level == 5) {
 				bossText = GameObject.Find ("BossBattleText").GetComponent<Text> ();
 				bossText.text = "DEFEAT THE BOSS:\n\n MR. O IS ANGRY AND READY TO RUMBLE." +
 				"(HINT: THE RIGHT BOND WILL CHANGE HIM)";
+
+				SoundManager.instance.musicSource.Pause(); // Play Boss Music
+				GameObject soundObject = GameObject.Find ("boss_music");
+				AudioSource audioSource = soundObject.GetComponent<AudioSource> ();
+				audioSource.Play ();
+
 			}
 
-			else {
+			if (instance.level < 3) {
 				bossText = GameObject.Find ("BossBattleText").GetComponent<Text> ();
 				int levelsleft = 3 - instance.level;
 				string levelslefttext = levelsleft.ToString ();
 				bossText.text = "The boss shall appear in " + levelslefttext + " more level(s)";
 			}
 
+			if ((instance.level > 3) && (instance.level < 5)) {
+				bossText = GameObject.Find ("BossBattleText").GetComponent<Text> ();
+				int levelsleft = 5 - instance.level;
+				string levelslefttext = levelsleft.ToString ();
+				bossText.text = "The boss shall appear in " + levelslefttext + " more level(s)";
+
+			}
+
+				 
 			//While doingSetup is true the player can't move, prevent player from moving while title card is up.
 			doingSetup = true;
 			
@@ -134,8 +152,8 @@ namespace Completed
 			if (instance.level == 3) {
 				Invoke ("HideLevelImage", 6);
 			}
-			else if (instance.level == 4) {
-				Invoke ("HideLevelImage", 7);
+			else if (instance.level == 5) {
+				Invoke ("HideLevelImage", 6);
 			}
 			else {
 				Invoke ("HideLevelImage", levelStartDelay);
@@ -147,6 +165,8 @@ namespace Completed
 
 			//Call the SetupScene function of the BoardManager script, pass it current level number.
 			boardScript.SetupScene (level);
+
+			//SoundManager.instance.musicSource.UnPause(); // Play Boss Music
 
 		}
 

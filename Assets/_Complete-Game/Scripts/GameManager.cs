@@ -193,7 +193,7 @@ namespace Completed
 			}
 
 			energyText = GameObject.Find("EnergyText").GetComponent<Text>();
-			energyText.text = "Energy:" + GameManager.instance.level + " k";
+			energyText.text = "Energy:" + GameManager.instance.level + "k";
 
 			//Clear any Enemy objects in our List to prepare for next level.
 			enemies.Clear ();

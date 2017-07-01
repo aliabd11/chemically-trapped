@@ -89,27 +89,39 @@ namespace Completed
 		{				
 
 			if (instance.level == 3) {
+				//http://satterthwaite.pbworks.com/w/file/fetch/31254926/Acid%20Base%20Properties%20Lab.pdf%5C
 				bossText = GameObject.Find ("BossBattleText").GetComponent<Text> ();
 				bossText.text = "DEFEAT THE BOSS:\n\n MR. RED LITMUS AND MR. BLUE LITMUS  HAS BEEN UNLEASHED. " +
 				"LAUNCH THE RIGHT ATTACKS TO TAKE HIM DOWN. \n\n(HINT: TO DEFEAT, USE pH to CHANGE ITS COLOUR) \n + ";
 
 				//Spawn only Mr. Red Litmus and Mr. Blue Litmus
 
-				SoundManager.instance.musicSource.Pause(); // Play Boss Music
+				SoundManager.instance.musicSource.Pause (); // Play Boss Music
 				GameObject soundObject = GameObject.Find ("boss_music");
 				AudioSource audioSource = soundObject.GetComponent<AudioSource> ();
 				audioSource.Play ();
 
 			} else if (instance.level == 5) {
+				//http://www.rsc.org/learn-chemistry/resource/res00000407/water-expands-when-it-freezes/
 				bossText = GameObject.Find ("BossBattleText").GetComponent<Text> ();
-				bossText.text = "DEFEAT THE BOSS:\n\n MR. O IS ANGRY AND READY TO RUMBLE." +
-				"(HINT: THE RIGHT BOND WILL CHANGE HIM)";
+				bossText.text = "DEFEAT THE BOSS:\n\n MS. WATER BOTTLE HATES WATER!" +
+				"(HINT: WATER EXPANDS WHEN IT FREEZES)";
 
-				SoundManager.instance.musicSource.Pause(); // Play Boss Music
+				SoundManager.instance.musicSource.Pause (); // Play Boss Music
 				GameObject soundObject = GameObject.Find ("boss_music");
 				AudioSource audioSource = soundObject.GetComponent<AudioSource> ();
 				audioSource.Play ();
 
+			} else if (instance.level == 7) {
+				//http://www.rsc.org/learn-chemistry/resource/res00000752/exploding-bubbles-of-hydrogen-and-oxygen?cmpid=CMP00005108
+				bossText = GameObject.Find ("BossBattleText").GetComponent<Text> ();
+				bossText.text = "DEFEAT THE BOSS:\n\n MONSIEUR JAR HAS ARRIVED!" +
+				"(HINT: he's afraid of BOTH hydrogen and oxygen)";
+			
+				SoundManager.instance.musicSource.Pause (); // Play Boss Music
+				GameObject soundObject = GameObject.Find ("boss_music");
+				AudioSource audioSource = soundObject.GetComponent<AudioSource> ();
+				audioSource.Play ();
 			}
 
 			if (instance.level < 3) {

@@ -47,11 +47,12 @@ namespace Completed
 			food = GameManager.instance.playerFoodPoints;
             numHydrogen = GameManager.instance.playerNumHydrogen;
             numOxygen = GameManager.instance.playerNumOxygen;
-			
+
 			//Set the foodText to reflect the current player food total.
-			foodText.text = "Energy: " + food;
+			foodText.text = "Food: " + food;
 			itemPickupText.text = "Item Pickup Details: \n";
-            inventoryText.text = "Chemical \n Inventory: \n" + "Nitrogen: " + numHydrogen + "\n" + "Plutonium: " + numOxygen + "\n";
+            inventoryText.text = "Chemical \n Inventory: \n" + "Hydrogen: " + numHydrogen + "\n" + "Oxygen: " + numOxygen + "\n";
+
 			//Call the Start function of the MovingObject base class.
 			base.Start ();
 
@@ -156,7 +157,7 @@ namespace Completed
 			food--;
 			
 			//Update food text display to reflect current score.
-			foodText.text = "Energy: " + food;
+			foodText.text = "Life: " + food;
 			
 			//Call the AttemptMove method of the base class, passing in the component T (in this case Wall) and x and y direction to move.
 			base.AttemptMove <T> (xDir, yDir);
@@ -234,13 +235,13 @@ namespace Completed
 					food += pointsPerHydrogen;
 					numOxygen++;
 					other.gameObject.SetActive (false);
-					foodText.text = "Hydrogen: +" + pointsPerHydrogen + " Energy: " + food;
+					foodText.text = "Hydrogen: +" + pointsPerHydrogen + " Life: " + food;
 					press_down = false;
 				}
 				
 				//Update foodText to represent current total and notify player that they gained points
-				itemPickupText.text = "Item Pickup Details: \n This is plutonium! \n Chemical symbol: H \n Atomic number: 94 \n PRIMARY ISOTOPE USED FOR NUCLEAR WEAPONS. \n\n Press 'f' to pick up the item";
-				inventoryText.text = "Chemical \n Inventory: \n" + "Nitrogen: " + numHydrogen + "\n" + "Plutonium: " + numOxygen + "\n";
+				itemPickupText.text = "Item Pickup Details: \n You got hydrogen! \n\n Most abundant chemical substance in the universe ! \n Chemical symbol: H \n Atomic number: 1 \n Lightest element on the periodic table";
+				inventoryText.text = "Chemical \n Inventory: \n" + "Hydrogen: " + numHydrogen + "\n" + "Oxygen: " + numOxygen + "\n";
 
                 //Call the RandomizeSfx function of SoundManager and pass in two drinking sounds to choose between to play the drinking sound effect.
                 SoundManager.instance.RandomizeSfx (drinkSound1, drinkSound2);
@@ -256,13 +257,13 @@ namespace Completed
 					food += pointsPerOxygen;
 					numHydrogen++;
 					other.gameObject.SetActive (false);
-					foodText.text = "Oxygen: +" + pointsPerOxygen + " Energy: " + food;
+					foodText.text = "Oxygen: +" + pointsPerOxygen + " Life: " + food;
 					press_down = false;
 				}
 
 				//Update foodText to represent current total and notify player that they gained points
-				itemPickupText.text = "Item Pickup Details: \n This is nitrogen! \n\n Seventh most abundant. \n Chemical symbol: O \n Atomic number: 7 \n Discovered by Daniel Rutherford \n\n Press 'f' to pick up the item";
-				inventoryText.text = "Chemical \n Inventory: \n" + "Nitrogen: " + numHydrogen + "\n" + "Plutonium: " + numOxygen + "\n";
+				itemPickupText.text = "Item Pickup Details: \n You got oxygen! \n\n Crucial part to life as we know it \n Chemical symbol: O \n Atomic number: 8 \n Third-most abundant element in the universe";
+				inventoryText.text = "Chemical \n Inventory: \n" + "Hydrogen: " + numHydrogen + "\n" + "Oxygen: " + numOxygen + "\n";
 
                 //Call the RandomizeSfx function of SoundManager and pass in two eating sounds to choose between to play the eating sound effect.
                 SoundManager.instance.RandomizeSfx (eatSound1, eatSound2);
@@ -293,7 +294,7 @@ namespace Completed
 			food -= loss;
 			
 			//Update the food display with the new total.
-			foodText.text = "-"+ loss + " Energy: " + food;
+			foodText.text = "-"+ loss + " Life: " + food;
 			
 			//Check to see if game has ended.
 			CheckIfGameOver ();

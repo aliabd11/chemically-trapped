@@ -20,6 +20,7 @@ namespace Completed
 		
 		private Text levelText;									//Text to display current level number.
 		private Text bossText;
+		private Text energyText;
 		public AudioClip newLevelSound;                //Audio clip to play when player dies.
 		public GameObject bossSource;
 
@@ -93,7 +94,7 @@ namespace Completed
 				bossText = GameObject.Find ("BossBattleText").GetComponent<Text> ();
 				bossText.text = "DEFEAT THE BOSS:\n\n MR. RED LITMUS AND MR. BLUE LITMUS  HAS BEEN UNLEASHED. " +
 				"LAUNCH THE RIGHT ATTACKS TO TAKE HIM DOWN. \n\n(HINT: TO DEFEAT, USE pH to CHANGE ITS COLOUR) \n + ";
-
+			
 				//Spawn only Mr. Red Litmus and Mr. Blue Litmus
 
 				SoundManager.instance.musicSource.Pause (); // Play Boss Music
@@ -122,6 +123,16 @@ namespace Completed
 				GameObject soundObject = GameObject.Find ("boss_music");
 				AudioSource audioSource = soundObject.GetComponent<AudioSource> ();
 				audioSource.Play ();
+			} else if (instance.level == 9) {
+				//with enough energy points, the user now has the ability to split an atom
+				bossText = GameObject.Find ("BossBattleText").GetComponent<Text> ();
+				bossText.text = "TRY TO ESCAPE:\n\n TIME IS TICKING!" +
+					"(HINT: Now I am become death, destroyer of worlds.)";
+
+				SoundManager.instance.musicSource.Pause (); // Play Boss Music
+				GameObject soundObject = GameObject.Find ("boss_music");
+				AudioSource audioSource = soundObject.GetComponent<AudioSource> ();
+				audioSource.Play ();
 			}
 
 			if (instance.level < 3) {
@@ -136,9 +147,19 @@ namespace Completed
 				int levelsleft = 5 - instance.level;
 				string levelslefttext = levelsleft.ToString ();
 				bossText.text = "The boss shall appear in " + levelslefttext + " more level(s)";
-
 			}
-
+			if ((instance.level > 5) && (instance.level < 7)) {
+				bossText = GameObject.Find ("BossBattleText").GetComponent<Text> ();
+				int levelsleft = 7 - instance.level;
+				string levelslefttext = levelsleft.ToString ();
+				bossText.text = "The boss shall appear in " + levelslefttext + " more level(s)";
+			}
+			if ((instance.level > 5) && (instance.level < 7)) {
+				bossText = GameObject.Find ("BossBattleText").GetComponent<Text> ();
+				int levelsleft = 7 - instance.level;
+				string levelslefttext = levelsleft.ToString ();
+				bossText.text = "The END is in " + levelslefttext + " more level(s)";
+			}
 				 
 			//While doingSetup is true the player can't move, prevent player from moving while title card is up.
 			doingSetup = true;
@@ -170,6 +191,9 @@ namespace Completed
 			else {
 				Invoke ("HideLevelImage", levelStartDelay);
 			}
+
+			energyText = GameObject.Find("EnergyText").GetComponent<Text>();
+			energyText.text = "Energy:" + GameManager.instance.level + " k";
 
 			//Clear any Enemy objects in our List to prepare for next level.
 			enemies.Clear ();

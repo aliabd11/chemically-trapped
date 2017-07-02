@@ -206,7 +206,7 @@ namespace Completed
 			//Check if the tag of the trigger collided with is Exit.
 			if(other.tag == "Exit")
 			{
-				if (GameManager.instance.level == 3) {
+				/*if (GameManager.instance.level == 3) {
 					if (GameManager.instance.enemies.Count == 0) {
 						Invoke ("Restart", restartLevelDelay);
 
@@ -218,13 +218,13 @@ namespace Completed
 						Destroy (playerNotice, 5);
 						//upon boss death, then allow player to leave
 					}
-				} else {
+				} else {*/
 					//Invoke the Restart function to start the next level with a delay of restartLevelDelay (default 1 second).
 					Invoke ("Restart", restartLevelDelay);
 				
 					//Disable the player object since level is over.
 					enabled = false;
-				}
+				//}
 			}
 
 			//Check if the tag of the trigger collided with is Soda.

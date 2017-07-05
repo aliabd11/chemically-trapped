@@ -27,10 +27,12 @@ namespace Completed
 		private GameObject levelImage;							//Image to block out level as levels are being set up, background for levelText.
 		private BoardManager boardScript;						//Store a reference to our BoardManager which will set up the level.
 		public int level = 1;									//Current level number, expressed in game as "Day 1".
-		public List<Enemy> enemies;							//List of all Enemy units, used to issue them move commands.
+		private List<Enemy> enemies;							//List of all Enemy units, used to issue them move commands.
 		private List<BossOneEnemy> bossenemies;					//List of all Boss Enemy units, used to issue them move commands.
 
 		private bool enemiesMoving;								//Boolean to check if enemies are moving.
+		private bool bossenemiesMoving;								//Boolean to check if enemies are moving.
+
 		private bool doingSetup = true;                         //Boolean to check if we're setting up board, prevent Player from moving during setup.
         private bool gameOver;
 		public bool explainText = false;
@@ -222,13 +224,15 @@ namespace Completed
 		void Update()
 		{
 			//Check that playersTurn or enemiesMoving or doingSetup are not currently true.
-			if(playersTurn || enemiesMoving || doingSetup)
+			if(playersTurn || enemiesMoving || doingSetup || enemiesMoving || bossenemiesMoving)
 				
 				//If any of these are true, return and do not start MoveEnemies.
 				return;
 			
 			//Start moving enemies.
+			StartCoroutine (MoveBoss ());
 			StartCoroutine (MoveEnemies ());
+
 
 		}
 		
@@ -238,14 +242,13 @@ namespace Completed
 			//Add Enemy to List enemies.
 			enemies.Add(script);
 		}
-
+		
 		public void AddBossToList(BossOneEnemy script)
 		{
-			//Add Enemy to List enemies.
+			//Add Boss Enemy to List bossenemies
 			bossenemies.Add(script);
+
 		}
-
-
 		
 		
 		//GameOver is called when the player reaches 0 food points
@@ -299,12 +302,47 @@ namespace Completed
 				//Wait for Enemy's moveTime before moving next Enemy, 
 				yield return new WaitForSeconds(enemies[i].moveTime);
 			}
+				
 			//Once Enemies are done moving, set playersTurn to true so player can move.
 			playersTurn = true;
 			
 			//Enemies are done moving, set enemiesMoving to false.
 			enemiesMoving = false;
 		}
+
+		//Coroutine to move enemies in sequence.
+		IEnumerator MoveBoss()
+		{
+			//While enemiesMoving is true player is unable to move.
+			bossenemiesMoving = true;
+
+			//Wait for turnDelay seconds, defaults to .1 (100 ms).
+			yield return new WaitForSeconds(turnDelay);
+
+			//If there are no enemies spawned (IE in first level):
+			if (bossenemies.Count == 0) 
+			{
+				//Wait for turnDelay seconds between moves, replaces delay caused by enemies moving when there are none.
+				yield return new WaitForSeconds(turnDelay);
+			}
+
+			//Loop through List of Enemy objects.
+			for (int i = 0; i < bossenemies.Count; i++)
+			{
+				//Call the MoveEnemy function of Enemy at index i in the enemies List.
+				bossenemies[i].TakeTurn ();
+
+				//Wait for Enemy's moveTime before moving next Enemy, 
+				yield return new WaitForSeconds(bossenemies[i].moveTime);
+			}
+
+			//Once Enemies are done moving, set playersTurn to true so player can move.
+			playersTurn = true;
+
+			//Enemies are done moving, set enemiesMoving to false.
+			bossenemiesMoving = false;
+		}
+
 
         public void Restart()
         {

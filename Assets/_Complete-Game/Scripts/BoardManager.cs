@@ -35,6 +35,8 @@ namespace Completed
 		public GameObject[] wallTiles;									//Array of wall prefabs.
 		public GameObject[] foodTiles;									//Array of food prefabs.
 		public GameObject[] enemyTiles;									//Array of enemy prefabs.
+		public GameObject[] bossenemyTiles;								//Array of bossenemy prefabs.
+
 		public GameObject[] outerWallTiles;								//Array of outer tile prefabs.
 		
 		private Transform boardHolder;									//A variable to store a reference to the transform of our Board object.
@@ -154,8 +156,13 @@ namespace Completed
 			}
 
 			//Instantiate a random number of enemies based on minimum and maximum, at randomized positions.
-			LayoutObjectAtRandom (enemyTiles, enemyCount, enemyCount);
-			
+			if (GameManager.instance.level == 3) {
+				LayoutObjectAtRandom (bossenemyTiles, enemyCount, enemyCount);
+			} else {
+				LayoutObjectAtRandom (enemyTiles, enemyCount, enemyCount);
+
+			}
+
 			//Instantiate the exit tile in the upper right hand corner of our game board
 			Instantiate (exit, new Vector3 (columns - 1, rows - 1, 0f), Quaternion.identity);
 		}

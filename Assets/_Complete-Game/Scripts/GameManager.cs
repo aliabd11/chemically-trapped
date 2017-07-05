@@ -11,7 +11,7 @@ namespace Completed
 	{
 		public float levelStartDelay = 2f;						//Time to wait before starting level, in seconds.
 		public float turnDelay = 0.1f;							//Delay between each Player turn.
-		public int playerFoodPoints = 100;						//Starting value for Player food points.
+		public int playerFoodPoints = 150;						//Starting value for Player food points.
         public int playerNumOxygen = 0;
         public int playerNumHydrogen = 0;
 		public static GameManager instance = null;				//Static instance of GameManager which allows it to be accessed by any other script.
@@ -107,7 +107,7 @@ namespace Completed
 			} else if (instance.level == 5) {
 				//http://www.rsc.org/learn-chemistry/resource/res00000407/water-expands-when-it-freezes/
 				bossText = GameObject.Find ("BossBattleText").GetComponent<Text> ();
-				bossText.text = "DEFEAT THE BOSS:\n\n MS. WATER BOTTLE HATES WATER!" +
+				bossText.text = "DEFEAT THE BOSS:\n\n MS. WATER BOTTLE AND FRIENDS HATE WATER!" +
 				"(HINT: WATER EXPANDS WHEN IT FREEZES)";
 
 				SoundManager.instance.musicSource.Pause (); // Play Boss Music
@@ -118,7 +118,7 @@ namespace Completed
 			} else if (instance.level == 7) {
 				//http://www.rsc.org/learn-chemistry/resource/res00000752/exploding-bubbles-of-hydrogen-and-oxygen?cmpid=CMP00005108
 				bossText = GameObject.Find ("BossBattleText").GetComponent<Text> ();
-				bossText.text = "DEFEAT THE BOSS:\n\n MONSIEUR JAR HAS ARRIVED!" +
+				bossText.text = "DEFEAT THE BOSS:\n\n MONSIEUR JAR ET AMIS HAS ARRIVED!" +
 				"(HINT: he's afraid of BOTH hydrogen and oxygen)";
 			
 				SoundManager.instance.musicSource.Pause (); // Play Boss Music

@@ -35,7 +35,9 @@ namespace Completed
 		public GameObject[] wallTiles;									//Array of wall prefabs.
 		public GameObject[] foodTiles;									//Array of food prefabs.
 		public GameObject[] enemyTiles;									//Array of enemy prefabs.
-		public GameObject[] bossenemyTiles;								//Array of bossenemy prefabs.
+		public GameObject[] bossoneenemyTiles;								//Array of bossenemy prefabs.
+		public GameObject[] bosstwoenemyTiles;								//Array of bossenemy prefabs.
+		public GameObject[] bossthreenemyTiles;								//Array of bossenemy prefabs.
 
 		public GameObject[] outerWallTiles;								//Array of outer tile prefabs.
 		
@@ -157,10 +159,13 @@ namespace Completed
 
 			//Instantiate a random number of enemies based on minimum and maximum, at randomized positions.
 			if (GameManager.instance.level == 3) {
-				LayoutObjectAtRandom (bossenemyTiles, enemyCount, enemyCount);
+				LayoutObjectAtRandom (bossoneenemyTiles, enemyCount, enemyCount);
+			} else if (GameManager.instance.level == 5) {
+				LayoutObjectAtRandom (bosstwoenemyTiles, enemyCount, enemyCount);
+			} else if (GameManager.instance.level == 7) {
+				LayoutObjectAtRandom (bossthreenemyTiles, enemyCount, enemyCount);
 			} else {
 				LayoutObjectAtRandom (enemyTiles, enemyCount, enemyCount);
-
 			}
 
 			//Instantiate the exit tile in the upper right hand corner of our game board

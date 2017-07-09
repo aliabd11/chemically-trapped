@@ -21,6 +21,7 @@ namespace Completed
 		private Text levelText;									//Text to display current level number.
 		private Text bossText;
 		private Text energyText;
+		private Text experimentText;
 		public AudioClip newLevelSound;                //Audio clip to play when player dies.
 		public GameObject bossSource;
 
@@ -92,12 +93,17 @@ namespace Completed
 		{				
 
 			if (instance.level == 3) {
-				//http://satterthwaite.pbworks.com/w/file/fetch/31254926/Acid%20Base%20Properties%20Lab.pdf%5C
+				//http://www.rsc.org/learn-chemistry/wiki/index.php?title=TeacherExpt:Acid_or_alkali%3F_Acidic_or_alkaline%3F&oldid=7423
 				bossText = GameObject.Find ("BossBattleText").GetComponent<Text> ();
 				bossText.text = "DEFEAT THE BOSS:\n\n MR. RED LITMUS AND MR. BLUE LITMUS  HAS BEEN UNLEASHED. " +
 				"LAUNCH THE RIGHT ATTACKS TO TAKE HIM DOWN. \n\n(HINT: TO DEFEAT, USE pH to CHANGE ITS COLOUR) \n + ";
 			
 				//Spawn only Mr. Red Litmus and Mr. Blue Litmus
+
+				experimentText = GameObject.Find ("ExperimentDetails").GetComponent<Text> ();
+				experimentText.text = @"**********" +"\n\nLitmus paper changes colour depending" +
+				" on whether a substance is acidic (ph < 7) or basic (ph > 7). \n\n If blue litmus paper turns red, the substance is acidic. If red litmus paper" + 
+					" turns blue, the substance is basic. \n\nIf neither red nor blue paper change colour, the substance is neutral (ph = 7).";
 
 				SoundManager.instance.musicSource.Pause (); // Play Boss Music
 				GameObject soundObject = GameObject.Find ("boss_music");
@@ -110,6 +116,12 @@ namespace Completed
 				bossText.text = "DEFEAT THE BOSS:\n\n MS. WATER BOTTLE AND FRIENDS HATE WATER!" +
 				"(HINT: WATER EXPANDS WHEN IT FREEZES)";
 
+
+				experimentText = GameObject.Find ("ExperimentDetails").GetComponent<Text> ();
+				experimentText.text = @"**********" +"\n\nA property of water is that it expands as it freezes, " +
+					" In the liquid state, water molecules can pack more closely together than in the structure of ice. \n\n This means the ice is less dense and so takes up more space than the liquid." + 
+					" \n\nThis is an unusual property and most substances become more dense as solids.";
+				
 				SoundManager.instance.musicSource.Pause (); // Play Boss Music
 				GameObject soundObject = GameObject.Find ("boss_music");
 				AudioSource audioSource = soundObject.GetComponent<AudioSource> ();
@@ -121,15 +133,25 @@ namespace Completed
 				bossText.text = "DEFEAT THE BOSS:\n\n MONSIEUR JAR ET AMIS HAS ARRIVED!" +
 				"(HINT: he's afraid of BOTH hydrogen and oxygen)";
 			
+				experimentText = GameObject.Find ("ExperimentDetails").GetComponent<Text> ();
+				experimentText.text = @"**********" +"\n\nWater contains hydrogen and oxygen. We can use electrical energy to cause water to split into these elements" +
+					" The formula of water is H20 so you expect twice the volume of hydrogen to form as oxygen. \n\n 2H2O(l) → 2H2(g) + O2(g)" + 
+					" \n\nAn explosion is caused by the energy released when the gases re-combine to form water.";
+				
 				SoundManager.instance.musicSource.Pause (); // Play Boss Music
 				GameObject soundObject = GameObject.Find ("boss_music");
 				AudioSource audioSource = soundObject.GetComponent<AudioSource> ();
 				audioSource.Play ();
 			} else if (instance.level == 9) {
 				//with enough energy points, the user now has the ability to split an atom
+				//http://www.physics4kids.com/files/mod_fission.html
 				bossText = GameObject.Find ("BossBattleText").GetComponent<Text> ();
 				bossText.text = "TRY TO ESCAPE:\n\n TIME IS TICKING!" +
 					"(HINT: Now I am become death, destroyer of worlds.)";
+
+				experimentText = GameObject.Find ("ExperimentDetails").GetComponent<Text> ();
+				experimentText.text = @"**********" + "\n\nNuclear power reactors use a reaction called nuclear fission ('splitting')" +
+				" The process of splitting a nucleus is called nuclear fission. \n\n Uranium or plutonium isotopes are normally used as the fuel in nuclear reactors, because their atoms have relatively large nuclei that are easy to split."; 
 
 				SoundManager.instance.musicSource.Pause (); // Play Boss Music
 				GameObject soundObject = GameObject.Find ("boss_music");

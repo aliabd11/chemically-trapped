@@ -230,6 +230,8 @@ namespace Completed
 			//Check if the tag of the trigger collided with is Soda.
 			else if(other.tag == "Hydrogen")
 			{
+				foodText.text = "Press 'f' to pick up";
+
 				//Add pointsPerHydrogen to players food points total
 				if (press_down) {
 					food += pointsPerHydrogen;
@@ -252,6 +254,8 @@ namespace Completed
 			//Check if the tag of the trigger collided with is Food.
 			else if(other.tag == "Oxygen")
 			{
+				foodText.text = "Press 'f' to pick up";
+
 				//Add pointsPerOxygen to the players current food total.
 				if (press_down) {
 					food += pointsPerOxygen;

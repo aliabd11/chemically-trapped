@@ -32,6 +32,8 @@ namespace Completed
         private int numOxygen;
         private int numHydrogen;
 
+        private Inventory inventory;
+
 #if UNITY_IOS || UNITY_ANDROID || UNITY_WP8 || UNITY_IPHONE
         private Vector2 touchOrigin = -Vector2.one;	//Used to store location of screen touch origin for mobile controls.
 #endif
@@ -53,8 +55,10 @@ namespace Completed
 			itemPickupText.text = "Item Pickup Details: \n";
             inventoryText.text = "Chemical \n Inventory: \n" + "Hydrogen: " + numHydrogen + "\n" + "Oxygen: " + numOxygen + "\n";
 
-			//Call the Start function of the MovingObject base class.
-			base.Start ();
+            inventory = GameObject.Find("Inventory").GetComponent<Inventory>();
+
+            //Call the Start function of the MovingObject base class.
+            base.Start ();
 
 		}
 		
@@ -238,6 +242,9 @@ namespace Completed
 					numOxygen++;
 					other.gameObject.SetActive (false);
 					foodText.text = "Hydrogen: +" + pointsPerHydrogen + " Life: " + food;
+
+                    inventory.AddItem(0);
+
 					press_down = false;
 				}
 				
@@ -262,6 +269,9 @@ namespace Completed
 					numHydrogen++;
 					other.gameObject.SetActive (false);
 					foodText.text = "Oxygen: +" + pointsPerOxygen + " Life: " + food;
+
+                    inventory.AddItem(1);
+
 					press_down = false;
 				}
 

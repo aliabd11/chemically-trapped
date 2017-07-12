@@ -1,0 +1,34 @@
+[
+	{
+		"id": 0,
+		"title": "Hydrogen",
+		//"title": "Bronze Sword",
+		"value": 1,
+		"stats": {
+			"power": 1,
+			"defence": 1,
+			"vitality": 1
+		},
+		"description": "First element in the periodic table.",
+		"stackable": true,
+		"rarity": 1,
+		//"slug": "cursorSword_bronze"
+		"slug": "hydrogen"
+	},
+	{
+		"id": 1,
+		"title": "Oxygen",
+		//"title": "Bronze Gauntlet",
+		"value": 8,
+		"stats": {
+			"power": 8,
+			"defence": 8,
+			"vitality": 8
+		},
+		"description": "Has 8 electrons.",
+		"stackable": true,
+		"rarity": 1,
+		//"slug": "cursorGauntlet_bronze"
+		"slug": "oxygen"
+	}
+]

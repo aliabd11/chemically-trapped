@@ -19,7 +19,7 @@ namespace Devdog.General
 
             _sphereCollider = gameObject.GetOrAddComponent<CircleCollider2D>();
             _sphereCollider.isTrigger = true;
-            _sphereCollider.radius = GeneralSettingsManager.instance.settings.triggerUseDistance;
+            _sphereCollider.radius = 0;
         }
 
         protected void OnTriggerEnter2D(Collider2D other)

@@ -18,7 +18,7 @@ namespace Devdog.General
             _rigidbody.isKinematic = true;
 
             _sphereCollider = gameObject.GetOrAddComponent<CircleCollider2D>();
-            _sphereCollider.isTrigger = true;
+            _sphereCollider.isTrigger = false;
             _sphereCollider.radius = 0;
         }
 

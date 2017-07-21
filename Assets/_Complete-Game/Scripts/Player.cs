@@ -52,8 +52,8 @@ namespace Completed
 
 			//Set the foodText to reflect the current player food total.
 			foodText.text = "Food: " + food;
-			itemPickupText.text = "Item Pickup Details: \n";
-            inventoryText.text = "Chemical \n Inventory: \n" + "Hydrogen: " + numHydrogen + "\n" + "Oxygen: " + numOxygen + "\n";
+			itemPickupText.text = "Details: \n";
+            inventoryText.text = "Chemical \n Inventory:";
 
             inventory = GameObject.Find("Inventory").GetComponent<Inventory>();
 
@@ -250,7 +250,6 @@ namespace Completed
 				
 				//Update foodText to represent current total and notify player that they gained points
 				itemPickupText.text = "Item Pickup Details: \n You got hydrogen! \n\n Most abundant chemical substance in the universe ! \n Chemical symbol: H \n Atomic number: 1 \n Lightest element on the periodic table";
-				inventoryText.text = "Chemical \n Inventory: \n" + "Hydrogen: " + numHydrogen + "\n" + "Oxygen: " + numOxygen + "\n";
 
                 //Call the RandomizeSfx function of SoundManager and pass in two drinking sounds to choose between to play the drinking sound effect.
                 SoundManager.instance.RandomizeSfx (drinkSound1, drinkSound2);
@@ -277,7 +276,6 @@ namespace Completed
 
 				//Update foodText to represent current total and notify player that they gained points
 				itemPickupText.text = "Item Pickup Details: \n You got oxygen! \n\n Crucial part to life as we know it \n Chemical symbol: O \n Atomic number: 8 \n Third-most abundant element in the universe";
-				inventoryText.text = "Chemical \n Inventory: \n" + "Hydrogen: " + numHydrogen + "\n" + "Oxygen: " + numOxygen + "\n";
 
                 //Call the RandomizeSfx function of SoundManager and pass in two eating sounds to choose between to play the eating sound effect.
                 SoundManager.instance.RandomizeSfx (eatSound1, eatSound2);

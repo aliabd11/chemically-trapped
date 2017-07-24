@@ -92,25 +92,65 @@ namespace Completed
 		void InitGame()
 		{				
 
-			if (instance.level == 3) {
+			if (instance.level == 2) {
 				//http://www.rsc.org/learn-chemistry/wiki/index.php?title=TeacherExpt:Acid_or_alkali%3F_Acidic_or_alkaline%3F&oldid=7423
 				bossText = GameObject.Find ("BossBattleText").GetComponent<Text> ();
-				bossText.text = "DEFEAT THE BOSS:\n\n MR. RED LITMUS AND MR. BLUE LITMUS  HAS BEEN UNLEASHED. " +
-				"LAUNCH THE RIGHT ATTACKS TO TAKE HIM DOWN. \n\n(HINT: TO DEFEAT, USE pH to CHANGE ITS COLOUR) \n + ";
-			
+				bossText.text = "PERFORM A DIRECT COMBINATION/SYNTHESIS REACTION TO GET PAST THIS LEVEL";
+
+				//Spawn only Mr. Red Litmus and Mr. Blue Litmus
+				//experimentText = GameObject.Find ("ExperimentDetails").GetComponent<Text> ();
+				experimentText = GameObject.Find ("ItemPickup").GetComponent<Text> ();
+
+				experimentText.text = @"**********" +"\n\nA direct combination/synthesis reaction: " +
+					"A + B -> AB \n\n 2 H2(g) + O2(g) → 2 H2O(g)\n" + 
+					" 2 CO(g) + O2(g) → 2CO2(g) \n\n3 H2(g) + N2(g) → 2 NH3(g)";
+
+			} else if (instance.level == 3) {
+				//http://www.rsc.org/learn-chemistry/wiki/index.php?title=TeacherExpt:Acid_or_alkali%3F_Acidic_or_alkaline%3F&oldid=7423
+				bossText = GameObject.Find ("BossBattleText").GetComponent<Text> ();
+				/*bossText.text = "DEFEAT THE BOSS:\n\n MR. RED LITMUS AND MR. BLUE LITMUS  HAS BEEN UNLEASHED. " +
+				"LAUNCH THE RIGHT ATTACKS TO TAKE HIM DOWN. \n\n(HINT: TO DEFEAT, USE pH to CHANGE ITS COLOUR) \n + ";*/
+				bossText.text = "PERFORM A CHEMICAL DECOMPOSITION REACTION TO GET PAST THIS LEVEL. BREAK DOWN A COMPOUND INTO SMALLER CHEMICAL SPECIES.";
+
 				//Spawn only Mr. Red Litmus and Mr. Blue Litmus
 				//experimentText = GameObject.Find ("ExperimentDetails").GetComponent<Text> ();
 				experimentText = GameObject.Find ("ItemPickup").GetComponent<Text> ();
 			
-				experimentText.text = @"**********" +"\n\nLitmus paper changes colour depending" +
+				experimentText.text = @"**********" +"\n\nA chemical decomposition reaction: " +
+					"AB -> A + B \n\n 2 H2O → 2 H2 + O2\n\n" + 
+					" 2 KClO3 → 2 KCl + 3 O2";
+				
+				/*experimentText.text = @"**********" +"\n\nLitmus paper changes colour depending" +
 				" on whether a substance is acidic (ph < 7) or basic (ph > 7). \n\n If blue litmus paper turns red, the substance is acidic. If red litmus paper" + 
-					" turns blue, the substance is basic. \n\nIf neither red nor blue paper change colour, the substance is neutral (ph = 7).";
+					" turns blue, the substance is basic. \n\nIf neither red nor blue paper change colour, the substance is neutral (ph = 7).";*/
 
 				SoundManager.instance.musicSource.Pause (); // Play Boss Music
 				GameObject soundObject = GameObject.Find ("boss_music");
 				AudioSource audioSource = soundObject.GetComponent<AudioSource> ();
 				audioSource.Play ();
 
+			} else if (instance.level == 4) {
+				//http://www.rsc.org/learn-chemistry/wiki/index.php?title=TeacherExpt:Acid_or_alkali%3F_Acidic_or_alkaline%3F&oldid=7423
+				bossText = GameObject.Find ("BossBattleText").GetComponent<Text> ();
+				/*bossText.text = "DEFEAT THE BOSS:\n\n MR. RED LITMUS AND MR. BLUE LITMUS  HAS BEEN UNLEASHED. " +
+				"LAUNCH THE RIGHT ATTACKS TO TAKE HIM DOWN. \n\n(HINT: TO DEFEAT, USE pH to CHANGE ITS COLOUR) \n + ";*/
+				bossText.text = "PERFORM A SINGLE DISPLACEMENT REACTION.";
+
+				//Spawn only Mr. Red Litmus and Mr. Blue Litmus
+				//experimentText = GameObject.Find ("ExperimentDetails").GetComponent<Text> ();
+				experimentText = GameObject.Find ("ItemPickup").GetComponent<Text> ();
+
+				experimentText.text = @"**********" +"\n\nA single displacement reaction: " +
+					"A + BC -> AC + B\n \n\n";
+
+				/*experimentText.text = @"**********" +"\n\nLitmus paper changes colour depending" +
+				" on whether a substance is acidic (ph < 7) or basic (ph > 7). \n\n If blue litmus paper turns red, the substance is acidic. If red litmus paper" + 
+					" turns blue, the substance is basic. \n\nIf neither red nor blue paper change colour, the substance is neutral (ph = 7).";*/
+
+				SoundManager.instance.musicSource.Pause (); // Play Boss Music
+				GameObject soundObject = GameObject.Find ("boss_music");
+				AudioSource audioSource = soundObject.GetComponent<AudioSource> ();
+				audioSource.Play ();
 			} else if (instance.level == 5) {
 				//http://www.rsc.org/learn-chemistry/resource/res00000407/water-expands-when-it-freezes/
 				bossText = GameObject.Find ("BossBattleText").GetComponent<Text> ();
@@ -163,7 +203,7 @@ namespace Completed
 				audioSource.Play ();
 			}
 
-			if (instance.level < 3) {
+			if (instance.level < 2) {
 				bossText = GameObject.Find ("BossBattleText").GetComponent<Text> ();
 				int levelsleft = 3 - instance.level;
 				string levelslefttext = levelsleft.ToString ();

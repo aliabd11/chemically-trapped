@@ -226,7 +226,7 @@ namespace Completed
 			if(other.tag == "Exit")
 			{
 				/*if (GameManager.instance.level == 3) {
-					if (GameManager.instance.enemies.Count == 0) {
+					if (inventory has level 3 item) {
 						Invoke ("Restart", restartLevelDelay);
 
 						//Disable the player object since level is over.

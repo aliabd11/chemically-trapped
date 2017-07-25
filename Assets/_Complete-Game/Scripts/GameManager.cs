@@ -126,11 +126,6 @@ namespace Completed
 				//Spawn only Mr. Red Litmus and Mr. Blue Litmus
 				//experimentText = GameObject.Find ("ExperimentDetails").GetComponent<Text> ();
 
-				/*itemPickupText = GameObject.Find("ItemPickup").GetComponent<Text>();
-
-				itemPickupText.text = @"**********" +"\n\nA single displacement reaction: " +
-					"A + BC -> AC + B \n\n Zn + 2 HCl → ZnCl2 + H2\n\n";*/
-
 				/*experimentText.text = @"**********" +"\n\nLitmus paper changes colour depending" +
 				" on whether a substance is acidic (ph < 7) or basic (ph > 7). \n\n If blue litmus paper turns red, the substance is acidic. If red litmus paper" + 
 					" turns blue, the substance is basic. \n\nIf neither red nor blue paper change colour, the substance is neutral (ph = 7).";*/
@@ -148,11 +143,6 @@ namespace Completed
 					" In the liquid state, water molecules can pack more closely together than in the structure of ice. \n\n This means the ice is less dense and so takes up more space than the liquid." + 
 					" \n\nThis is an unusual property and most substances become more dense as solids.";
 				
-				SoundManager.instance.musicSource.Pause (); // Play Boss Music
-				GameObject soundObject = GameObject.Find ("boss_music");
-				AudioSource audioSource = soundObject.GetComponent<AudioSource> ();
-				audioSource.Play ();
-
 			} else if (instance.level == 7) {
 				//http://www.rsc.org/learn-chemistry/resource/res00000752/exploding-bubbles-of-hydrogen-and-oxygen?cmpid=CMP00005108
 				bossText = GameObject.Find ("BossBattleText").GetComponent<Text> ();
@@ -193,26 +183,7 @@ namespace Completed
 				string levelslefttext = levelsleft.ToString ();
 				bossText.text = "The boss shall appear in " + levelslefttext + " more level(s)";
 			}
-
-			/*if ((instance.level > 3) && (instance.level < 5)) {
-				bossText = GameObject.Find ("BossBattleText").GetComponent<Text> ();
-				int levelsleft = 5 - instance.level;
-				string levelslefttext = levelsleft.ToString ();
-				bossText.text = "The boss shall appear in " + levelslefttext + " more level(s)";
-			}
-			if ((instance.level > 5) && (instance.level < 7)) {
-				bossText = GameObject.Find ("BossBattleText").GetComponent<Text> ();
-				int levelsleft = 7 - instance.level;
-				string levelslefttext = levelsleft.ToString ();
-				bossText.text = "The boss shall appear in " + levelslefttext + " more level(s)";
-			}
-			if ((instance.level > 5) && (instance.level < 7)) {
-				bossText = GameObject.Find ("BossBattleText").GetComponent<Text> ();
-				int levelsleft = 7 - instance.level;
-				string levelslefttext = levelsleft.ToString ();
-				bossText.text = "The END is in " + levelslefttext + " more level(s)";
-			}*/
-				 
+								 
 			//While doingSetup is true the player can't move, prevent player from moving while title card is up.
 			doingSetup = true;
 			
@@ -253,9 +224,6 @@ namespace Completed
 
 			//Call the SetupScene function of the BoardManager script, pass it current level number.
 			boardScript.SetupScene (level);
-
-			//SoundManager.instance.musicSource.UnPause(); // Play Boss Music
-
 		}
 
 		

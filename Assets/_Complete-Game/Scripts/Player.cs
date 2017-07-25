@@ -77,7 +77,7 @@ namespace Completed
 		{
 			//If it's not the player's turn, exit the function.
 			if(!GameManager.instance.playersTurn) return;
-			
+
 			int horizontal = 0;  	//Used to store the horizontal move direction.
 			int vertical = 0;		//Used to store the vertical move direction.
 			
@@ -151,6 +151,21 @@ namespace Completed
 				AttemptMove<IAttackable>(horizontal, vertical);
 
 			}
+
+			if (GameManager.instance.level == 2) {
+				itemPickupText.text = "@**********" + "\n\nA direct combination/synthesis reaction: " +
+					"A + B -> AB \n\n" + " In this reaction, two or more chemical species combine to form a more complex product." +
+					" 2 H2(g) + O2(g) → 2 H2O(g)\n" + 
+					" 2 CO(g) + O2(g) → 2CO2(g) \n\n3 H2(g) + N2(g) → 2 NH3(g)";
+			} else if (GameManager.instance.level == 3) {
+				itemPickupText.text = @"**********" +"\n\nA chemical decomposition reaction: " +
+					"AB -> A + B \n\n 2 H2O → 2 H2 + O2\n\n" + 
+					" 2 KClO3 → 2 KCl + 3 O2";
+			} else if (GameManager.instance.level == 4) {
+				itemPickupText.text = @"**********" +"\n\nA single displacement reaction: " +
+					"A + BC -> AC + B \n\n Zn + 2 HCl → ZnCl2 + H2\n\n";
+			}
+
 		}
 		
 		//AttemptMove overrides the AttemptMove function in the base class MovingObject
@@ -334,6 +349,7 @@ namespace Completed
                 playerNotice.text = "";
             }
 		}
+
 	}
 }
 

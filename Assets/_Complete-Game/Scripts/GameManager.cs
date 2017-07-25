@@ -17,11 +17,13 @@ namespace Completed
 		public static GameManager instance = null;				//Static instance of GameManager which allows it to be accessed by any other script.
 		[HideInInspector] public bool playersTurn = true;		//Boolean to check if it's players turn, hidden in inspector but public.
 		
-		
+
 		private Text levelText;									//Text to display current level number.
 		private Text bossText;
 		private Text energyText;
 		private Text experimentText;
+		public Text itemPickupText;
+
 		public AudioClip newLevelSound;                //Audio clip to play when player dies.
 		public GameObject bossSource;
 
@@ -95,15 +97,10 @@ namespace Completed
 			if (instance.level == 2) {
 				//http://www.rsc.org/learn-chemistry/wiki/index.php?title=TeacherExpt:Acid_or_alkali%3F_Acidic_or_alkaline%3F&oldid=7423
 				bossText = GameObject.Find ("BossBattleText").GetComponent<Text> ();
-				bossText.text = "PERFORM A DIRECT COMBINATION/SYNTHESIS REACTION TO GET PAST THIS LEVEL";
+				bossText.text = "PERFORM A DIRECT COMBINATION/SYNTHESIS REACTION TO GET PAST THIS LEVEL.";
 
 				//Spawn only Mr. Red Litmus and Mr. Blue Litmus
 				//experimentText = GameObject.Find ("ExperimentDetails").GetComponent<Text> ();
-				experimentText = GameObject.Find ("ItemPickup").GetComponent<Text> ();
-
-				experimentText.text = @"**********" +"\n\nA direct combination/synthesis reaction: " +
-					"A + B -> AB \n\n 2 H2(g) + O2(g) → 2 H2O(g)\n" + 
-					" 2 CO(g) + O2(g) → 2CO2(g) \n\n3 H2(g) + N2(g) → 2 NH3(g)";
 
 			} else if (instance.level == 3) {
 				//http://www.rsc.org/learn-chemistry/wiki/index.php?title=TeacherExpt:Acid_or_alkali%3F_Acidic_or_alkaline%3F&oldid=7423
@@ -114,20 +111,10 @@ namespace Completed
 
 				//Spawn only Mr. Red Litmus and Mr. Blue Litmus
 				//experimentText = GameObject.Find ("ExperimentDetails").GetComponent<Text> ();
-				experimentText = GameObject.Find ("ItemPickup").GetComponent<Text> ();
-			
-				experimentText.text = @"**********" +"\n\nA chemical decomposition reaction: " +
-					"AB -> A + B \n\n 2 H2O → 2 H2 + O2\n\n" + 
-					" 2 KClO3 → 2 KCl + 3 O2";
-				
+
 				/*experimentText.text = @"**********" +"\n\nLitmus paper changes colour depending" +
 				" on whether a substance is acidic (ph < 7) or basic (ph > 7). \n\n If blue litmus paper turns red, the substance is acidic. If red litmus paper" + 
 					" turns blue, the substance is basic. \n\nIf neither red nor blue paper change colour, the substance is neutral (ph = 7).";*/
-
-				SoundManager.instance.musicSource.Pause (); // Play Boss Music
-				GameObject soundObject = GameObject.Find ("boss_music");
-				AudioSource audioSource = soundObject.GetComponent<AudioSource> ();
-				audioSource.Play ();
 
 			} else if (instance.level == 4) {
 				//http://www.rsc.org/learn-chemistry/wiki/index.php?title=TeacherExpt:Acid_or_alkali%3F_Acidic_or_alkaline%3F&oldid=7423
@@ -138,20 +125,17 @@ namespace Completed
 
 				//Spawn only Mr. Red Litmus and Mr. Blue Litmus
 				//experimentText = GameObject.Find ("ExperimentDetails").GetComponent<Text> ();
-				experimentText = GameObject.Find ("ItemPickup").GetComponent<Text> ();
 
-				experimentText.text = @"**********" +"\n\nA single displacement reaction: " +
-					"A + BC -> AC + B\n \n\n";
+				/*itemPickupText = GameObject.Find("ItemPickup").GetComponent<Text>();
+
+				itemPickupText.text = @"**********" +"\n\nA single displacement reaction: " +
+					"A + BC -> AC + B \n\n Zn + 2 HCl → ZnCl2 + H2\n\n";*/
 
 				/*experimentText.text = @"**********" +"\n\nLitmus paper changes colour depending" +
 				" on whether a substance is acidic (ph < 7) or basic (ph > 7). \n\n If blue litmus paper turns red, the substance is acidic. If red litmus paper" + 
 					" turns blue, the substance is basic. \n\nIf neither red nor blue paper change colour, the substance is neutral (ph = 7).";*/
 
-				SoundManager.instance.musicSource.Pause (); // Play Boss Music
-				GameObject soundObject = GameObject.Find ("boss_music");
-				AudioSource audioSource = soundObject.GetComponent<AudioSource> ();
-				audioSource.Play ();
-			} else if (instance.level == 5) {
+			} /*else if (instance.level == 5) {
 				//http://www.rsc.org/learn-chemistry/resource/res00000407/water-expands-when-it-freezes/
 				bossText = GameObject.Find ("BossBattleText").GetComponent<Text> ();
 				bossText.text = "DEFEAT THE BOSS:\n\n MS. WATER BOTTLE AND FRIENDS HATE WATER!" +
@@ -159,8 +143,8 @@ namespace Completed
 
 
 				//experimentText = GameObject.Find ("ExperimentDetails").GetComponent<Text> ();
-				experimentText = GameObject.Find ("ItemPickup").GetComponent<Text> ();
-				experimentText.text = @"**********" +"\n\nA property of water is that it expands as it freezes, " +
+				itemPickupText = GameObject.Find("ItemPickup").GetComponent<Text>();
+				itemPickupText.text = @"**********" +"\n\nA property of water is that it expands as it freezes, " +
 					" In the liquid state, water molecules can pack more closely together than in the structure of ice. \n\n This means the ice is less dense and so takes up more space than the liquid." + 
 					" \n\nThis is an unusual property and most substances become more dense as solids.";
 				
@@ -176,8 +160,8 @@ namespace Completed
 				"(HINT: he's afraid of BOTH hydrogen and oxygen)";
 			
 				//experimentText = GameObject.Find ("ExperimentDetails").GetComponent<Text> ();
-				experimentText = GameObject.Find ("ItemPickup").GetComponent<Text> ();
-				experimentText.text = @"**********" +"\n\nWater contains hydrogen and oxygen. We can use electrical energy to cause water to split into these elements" +
+				itemPickupText = GameObject.Find("ItemPickup").GetComponent<Text>();
+				itemPickupText.text = @"**********" +"\n\nWater contains hydrogen and oxygen. We can use electrical energy to cause water to split into these elements" +
 					" The formula of water is H20 so you expect twice the volume of hydrogen to form as oxygen. \n\n 2H2O(l) → 2H2(g) + O2(g)" + 
 					" \n\nAn explosion is caused by the energy released when the gases re-combine to form water.";
 				
@@ -185,7 +169,7 @@ namespace Completed
 				GameObject soundObject = GameObject.Find ("boss_music");
 				AudioSource audioSource = soundObject.GetComponent<AudioSource> ();
 				audioSource.Play ();
-			} else if (instance.level == 9) {
+			} */else if (instance.level == 9) {
 				//with enough energy points, the user now has the ability to split an atom
 				//http://www.physics4kids.com/files/mod_fission.html
 				bossText = GameObject.Find ("BossBattleText").GetComponent<Text> ();
@@ -193,8 +177,8 @@ namespace Completed
 					"(HINT: Now I am become death, destroyer of worlds.)";
 
 				//experimentText = GameObject.Find ("ExperimentDetails").GetComponent<Text> ();
-				experimentText = GameObject.Find ("ItemPickup").GetComponent<Text> ();
-				experimentText.text = @"**********" + "\n\nNuclear power reactors use a reaction called nuclear fission ('splitting')" +
+				itemPickupText = GameObject.Find("ItemPickup").GetComponent<Text>();
+				itemPickupText.text = @"**********" + "\n\nNuclear power reactors use a reaction called nuclear fission ('splitting')" +
 				" The process of splitting a nucleus is called nuclear fission. \n\n Uranium or plutonium isotopes are normally used as the fuel in nuclear reactors, because their atoms have relatively large nuclei that are easy to split."; 
 
 				SoundManager.instance.musicSource.Pause (); // Play Boss Music
@@ -203,14 +187,14 @@ namespace Completed
 				audioSource.Play ();
 			}
 
-			if (instance.level < 2) {
+			if (instance.level < 1) {
 				bossText = GameObject.Find ("BossBattleText").GetComponent<Text> ();
 				int levelsleft = 3 - instance.level;
 				string levelslefttext = levelsleft.ToString ();
 				bossText.text = "The boss shall appear in " + levelslefttext + " more level(s)";
 			}
 
-			if ((instance.level > 3) && (instance.level < 5)) {
+			/*if ((instance.level > 3) && (instance.level < 5)) {
 				bossText = GameObject.Find ("BossBattleText").GetComponent<Text> ();
 				int levelsleft = 5 - instance.level;
 				string levelslefttext = levelsleft.ToString ();
@@ -227,7 +211,7 @@ namespace Completed
 				int levelsleft = 7 - instance.level;
 				string levelslefttext = levelsleft.ToString ();
 				bossText.text = "The END is in " + levelslefttext + " more level(s)";
-			}
+			}*/
 				 
 			//While doingSetup is true the player can't move, prevent player from moving while title card is up.
 			doingSetup = true;

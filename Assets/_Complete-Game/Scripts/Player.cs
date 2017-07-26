@@ -158,11 +158,11 @@ namespace Completed
 					" 2 H2(g) + O2(g) → 2 H2O(g)\n" + 
 					" 2 CO(g) + O2(g) → 2CO2(g) \n\n3 H2(g) + N2(g) → 2 NH3(g)";
 			} else if (GameManager.instance.level == 3) {
-				itemPickupText.text = @"**********" +"\n\nA chemical decomposition reaction: " +
+				itemPickupText.text = @"**********" +"\n\nA chemical decomposition reaction: " + " In this reaction, a compound is broken down into smaller chemical species" +
 					"AB -> A + B \n\n 2 H2O → 2 H2 + O2\n\n" + 
 					" 2 KClO3 → 2 KCl + 3 O2";
 			} else if (GameManager.instance.level == 4) {
-				itemPickupText.text = @"**********" +"\n\nA single displacement reaction: " +
+				itemPickupText.text = @"**********" +"\n\nA single displacement reaction: " + "This reaction is characterized by one element being displaced from a compound by another element." +
 					"A + BC -> AC + B \n\n Zn + 2 HCl → ZnCl2 + H2\n\n";
 			}
 
@@ -225,25 +225,25 @@ namespace Completed
 			//Check if the tag of the trigger collided with is Exit.
 			if(other.tag == "Exit")
 			{
-				/*if (GameManager.instance.level == 3) {
-					if (inventory has level 3 item) {
+				if (GameManager.instance.level == 4) {
+					/*if (inventory has level 3 item) {
 						Invoke ("Restart", restartLevelDelay);
 
 						//Disable the player object since level is over.
 						enabled = false;
 					}
-					else {
-						playerNotice.text = "THE BOSS IS STILL ALIVE \n YOU SHALL NOT LEAVE";
-						Destroy (playerNotice, 5);
+					else {*/
+					playerNotice.text = "THE BOSS IS STILL ALIVE \n YOU SHALL NOT LEAVE";
+					Destroy (playerNotice, 5);
 						//upon boss death, then allow player to leave
 					}
-				} else {*/
+				else {
 					//Invoke the Restart function to start the next level with a delay of restartLevelDelay (default 1 second).
 					Invoke ("Restart", restartLevelDelay);
 				
 					//Disable the player object since level is over.
 					enabled = false;
-				//}
+				}
 			}
 
 			//Check if the tag of the trigger collided with is Soda.

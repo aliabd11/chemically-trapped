@@ -158,11 +158,11 @@ namespace Completed
 			}
 
 			//Instantiate a random number of enemies based on minimum and maximum, at randomized positions.
-			if (GameManager.instance.level == 3) {
+			if (GameManager.instance.level == 2) {
 				LayoutObjectAtRandom (bossoneenemyTiles, enemyCount, enemyCount);
-			} else if (GameManager.instance.level == 5) {
+			} else if (GameManager.instance.level == 3) {
 				LayoutObjectAtRandom (bosstwoenemyTiles, enemyCount, enemyCount);
-			} else if (GameManager.instance.level == 7) {
+			} else if (GameManager.instance.level == 4) {
 				LayoutObjectAtRandom (bossthreenemyTiles, enemyCount, enemyCount);
 			} else {
 				LayoutObjectAtRandom (enemyTiles, enemyCount, enemyCount);

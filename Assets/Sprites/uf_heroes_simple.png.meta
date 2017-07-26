@@ -1,0 +1,2178 @@
+fileFormatVersion: 2
+guid: 458f1cb93e7d0483abe155301a9ee8ae
+timeCreated: 1501091103
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: uf_heroes_simple_0
+    21300002: uf_heroes_simple_1
+    21300004: uf_heroes_simple_2
+    21300006: uf_heroes_simple_3
+    21300008: uf_heroes_simple_4
+    21300010: uf_heroes_simple_5
+    21300012: uf_heroes_simple_6
+    21300014: uf_heroes_simple_7
+    21300016: uf_heroes_simple_8
+    21300018: uf_heroes_simple_9
+    21300020: uf_heroes_simple_10
+    21300022: uf_heroes_simple_11
+    21300024: uf_heroes_simple_12
+    21300026: uf_heroes_simple_13
+    21300028: uf_heroes_simple_14
+    21300030: uf_heroes_simple_15
+    21300032: uf_heroes_simple_16
+    21300034: uf_heroes_simple_17
+    21300036: uf_heroes_simple_18
+    21300038: uf_heroes_simple_19
+    21300040: uf_heroes_simple_20
+    21300042: uf_heroes_simple_21
+    21300044: uf_heroes_simple_22
+    21300046: uf_heroes_simple_23
+    21300048: uf_heroes_simple_24
+    21300050: uf_heroes_simple_25
+    21300052: uf_heroes_simple_26
+    21300054: uf_heroes_simple_27
+    21300056: uf_heroes_simple_28
+    21300058: uf_heroes_simple_29
+    21300060: uf_heroes_simple_30
+    21300062: uf_heroes_simple_31
+    21300064: uf_heroes_simple_32
+    21300066: uf_heroes_simple_33
+    21300068: uf_heroes_simple_34
+    21300070: uf_heroes_simple_35
+    21300072: uf_heroes_simple_36
+    21300074: uf_heroes_simple_37
+    21300076: uf_heroes_simple_38
+    21300078: uf_heroes_simple_39
+    21300080: uf_heroes_simple_40
+    21300082: uf_heroes_simple_41
+    21300084: uf_heroes_simple_42
+    21300086: uf_heroes_simple_43
+    21300088: uf_heroes_simple_44
+    21300090: uf_heroes_simple_45
+    21300092: uf_heroes_simple_46
+    21300094: uf_heroes_simple_47
+    21300096: uf_heroes_simple_48
+    21300098: uf_heroes_simple_49
+    21300100: uf_heroes_simple_50
+    21300102: uf_heroes_simple_51
+    21300104: uf_heroes_simple_52
+    21300106: uf_heroes_simple_53
+    21300108: uf_heroes_simple_54
+    21300110: uf_heroes_simple_55
+    21300112: uf_heroes_simple_56
+    21300114: uf_heroes_simple_57
+    21300116: uf_heroes_simple_58
+    21300118: uf_heroes_simple_59
+    21300120: uf_heroes_simple_60
+    21300122: uf_heroes_simple_61
+    21300124: uf_heroes_simple_62
+    21300126: uf_heroes_simple_63
+    21300128: uf_heroes_simple_64
+    21300130: uf_heroes_simple_65
+    21300132: uf_heroes_simple_66
+    21300134: uf_heroes_simple_67
+    21300136: uf_heroes_simple_68
+    21300138: uf_heroes_simple_69
+    21300140: uf_heroes_simple_70
+    21300142: uf_heroes_simple_71
+    21300144: uf_heroes_simple_72
+    21300146: uf_heroes_simple_73
+    21300148: uf_heroes_simple_74
+    21300150: uf_heroes_simple_75
+    21300152: uf_heroes_simple_76
+    21300154: uf_heroes_simple_77
+    21300156: uf_heroes_simple_78
+    21300158: uf_heroes_simple_79
+    21300160: uf_heroes_simple_80
+    21300162: uf_heroes_simple_81
+    21300164: uf_heroes_simple_82
+    21300166: uf_heroes_simple_83
+    21300168: uf_heroes_simple_84
+    21300170: uf_heroes_simple_85
+    21300172: uf_heroes_simple_86
+    21300174: uf_heroes_simple_87
+    21300176: uf_heroes_simple_88
+    21300178: uf_heroes_simple_89
+    21300180: uf_heroes_simple_90
+    21300182: uf_heroes_simple_91
+    21300184: uf_heroes_simple_92
+    21300186: uf_heroes_simple_93
+    21300188: uf_heroes_simple_94
+    21300190: uf_heroes_simple_95
+    21300192: uf_heroes_simple_96
+    21300194: uf_heroes_simple_97
+    21300196: uf_heroes_simple_98
+    21300198: uf_heroes_simple_99
+    21300200: uf_heroes_simple_100
+    21300202: uf_heroes_simple_101
+    21300204: uf_heroes_simple_102
+    21300206: uf_heroes_simple_103
+    21300208: uf_heroes_simple_104
+    21300210: uf_heroes_simple_105
+    21300212: uf_heroes_simple_106
+    21300214: uf_heroes_simple_107
+    21300216: uf_heroes_simple_108
+    21300218: uf_heroes_simple_109
+    21300220: uf_heroes_simple_110
+    21300222: uf_heroes_simple_111
+    21300224: uf_heroes_simple_112
+    21300226: uf_heroes_simple_113
+    21300228: uf_heroes_simple_114
+    21300230: uf_heroes_simple_115
+    21300232: uf_heroes_simple_116
+    21300234: uf_heroes_simple_117
+    21300236: uf_heroes_simple_118
+    21300238: uf_heroes_simple_119
+    21300240: uf_heroes_simple_120
+    21300242: uf_heroes_simple_121
+    21300244: uf_heroes_simple_122
+    21300246: uf_heroes_simple_123
+    21300248: uf_heroes_simple_124
+    21300250: uf_heroes_simple_125
+    21300252: uf_heroes_simple_126
+    21300254: uf_heroes_simple_127
+    21300256: uf_heroes_simple_128
+    21300258: uf_heroes_simple_129
+    21300260: uf_heroes_simple_130
+    21300262: uf_heroes_simple_131
+    21300264: uf_heroes_simple_132
+    21300266: uf_heroes_simple_133
+    21300268: uf_heroes_simple_134
+    21300270: uf_heroes_simple_135
+    21300272: uf_heroes_simple_136
+    21300274: uf_heroes_simple_137
+    21300276: uf_heroes_simple_138
+    21300278: uf_heroes_simple_139
+    21300280: uf_heroes_simple_140
+    21300282: uf_heroes_simple_141
+    21300284: uf_heroes_simple_142
+    21300286: uf_heroes_simple_143
+    21300288: uf_heroes_simple_144
+    21300290: uf_heroes_simple_145
+    21300292: uf_heroes_simple_146
+    21300294: uf_heroes_simple_147
+    21300296: uf_heroes_simple_148
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 32
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: uf_heroes_simple_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 582
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_1
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 582
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_2
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 582
+        width: 32
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_3
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 582
+        width: 32
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_4
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 582
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_5
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 582
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_6
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 582
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_7
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 582
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_8
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 582
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_9
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 582
+        width: 32
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_10
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 534
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_11
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 534
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_12
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 534
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_13
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 534
+        width: 32
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_14
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 534
+        width: 32
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_15
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 534
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_16
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 534
+        width: 32
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_17
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 534
+        width: 32
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_18
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 534
+        width: 32
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_19
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 534
+        width: 35
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_20
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 486
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_21
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 486
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_22
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 486
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_23
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 486
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_24
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 486
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_25
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 486
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_26
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 486
+        width: 32
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_27
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 486
+        width: 33
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_28
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 486
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_29
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 486
+        width: 32
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_30
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 438
+        width: 32
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_31
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 438
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_32
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 438
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_33
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 438
+        width: 32
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_34
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 438
+        width: 32
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_35
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 438
+        width: 32
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_36
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 438
+        width: 35
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_37
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 438
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_38
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 438
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_39
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 438
+        width: 35
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_40
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 390
+        width: 35
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_41
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 390
+        width: 35
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_42
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 390
+        width: 34
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_43
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 390
+        width: 32
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_44
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 399
+        width: 40
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_45
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 402
+        width: 26
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_46
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 390
+        width: 40
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_47
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 390
+        width: 26
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_48
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 390
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_49
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 390
+        width: 26
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_50
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 390
+        width: 24
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_51
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 390
+        width: 20
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_52
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 342
+        width: 31
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_53
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 342
+        width: 41
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_54
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 342
+        width: 34
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_55
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 342
+        width: 34
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_56
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 342
+        width: 39
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_57
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 342
+        width: 30
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_58
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 342
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_59
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 342
+        width: 34
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_60
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 342
+        width: 34
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_61
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 342
+        width: 32
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_62
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 294
+        width: 32
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_63
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 294
+        width: 32
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_64
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 294
+        width: 33
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_65
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 294
+        width: 33
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_66
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 294
+        width: 33
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_67
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 294
+        width: 33
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_68
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 294
+        width: 33
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_69
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 294
+        width: 33
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_70
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 300
+        width: 40
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_71
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 300
+        width: 40
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_72
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 294
+        width: 32
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_73
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 294
+        width: 32
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_74
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 246
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_75
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 246
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_76
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 246
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_77
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 253
+        width: 26
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_78
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 253
+        width: 26
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_79
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 247
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_80
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 247
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_81
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 247
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_82
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 247
+        width: 34
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_83
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 247
+        width: 34
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_84
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 246
+        width: 20
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_85
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 246
+        width: 20
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_86
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 198
+        width: 34
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_87
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 198
+        width: 34
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_88
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 198
+        width: 34
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_89
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 198
+        width: 34
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_90
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 204
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_91
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 204
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_92
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 198
+        width: 46
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_93
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 198
+        width: 46
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_94
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 198
+        width: 46
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_95
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 198
+        width: 46
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_96
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 198
+        width: 30
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_97
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 198
+        width: 20
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_98
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 160
+        width: 26
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_99
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 160
+        width: 26
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_100
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 160
+        width: 26
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_101
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 150
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_102
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 150
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_103
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 150
+        width: 34
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_104
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 150
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_105
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 150
+        width: 34
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_106
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 150
+        width: 34
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_107
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 150
+        width: 34
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_108
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 150
+        width: 22
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_109
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 150
+        width: 22
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_110
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 150
+        width: 22
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_111
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 102
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_112
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 102
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_113
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 102
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_114
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 102
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_115
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 102
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_116
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 102
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_117
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 102
+        width: 24
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_118
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 102
+        width: 24
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_119
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 102
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_120
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 102
+        width: 36
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_121
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 62
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_122
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 62
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_123
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 54
+        width: 26
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_124
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 62
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_125
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 54
+        width: 26
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_126
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 62
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_127
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 54
+        width: 26
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_128
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 62
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_129
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 54
+        width: 26
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_130
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 54
+        width: 28
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_131
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 54
+        width: 40
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_132
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 54
+        width: 34
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_133
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 54
+        width: 34
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_134
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 54
+        width: 34
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_135
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 54
+        width: 26
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_136
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 17
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_137
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 17
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_138
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 17
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_139
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 6
+        width: 32
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_140
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 6
+        width: 32
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_141
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 6
+        width: 32
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_142
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 6
+        width: 23
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_143
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 11
+        width: 24
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_144
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 6
+        width: 32
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_145
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 6
+        width: 32
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_146
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 6
+        width: 22
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_147
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 6
+        width: 22
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: uf_heroes_simple_148
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 6
+        width: 22
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

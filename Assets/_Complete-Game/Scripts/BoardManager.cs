@@ -145,7 +145,7 @@ namespace Completed
 			LayoutObjectAtRandom (wallTiles, wallCount.minimum, wallCount.maximum);
 			
 			//Instantiate a random number of food tiles based on minimum and maximum, at randomized positions.
-			LayoutObjectAtRandom (foodTiles, foodCount.minimum, foodCount.maximum);
+			LayoutObjectAtRandom (foodTiles, foodCount.minimum + 4, foodCount.maximum + 4);
 			
 			//Determine number of enemies based on current level number, based on a logarithmic progression
 			int enemyCount = (int)Mathf.Log(level, 2f);

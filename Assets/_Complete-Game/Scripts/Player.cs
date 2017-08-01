@@ -17,7 +17,7 @@ namespace Completed
 		public Text itemPickupText;
         public Text inventoryText;
 		public Text playerNotice;						//UI Text to display current player food total.
-	       
+
 
 		public AudioClip moveSound1;				//1 of 2 Audio clips to play when player moves.
 		public AudioClip moveSound2;				//2 of 2 Audio clips to play when player moves.
@@ -225,19 +225,20 @@ namespace Completed
 			//Check if the tag of the trigger collided with is Exit.
 			if(other.tag == "Exit")
 			{
-				if (GameManager.instance.level == 4) {
-					/*if (inventory has level 3 item) {
+
+				if (GameManager.instance.level == 1) {
+					if (Devdog.InventoryPro.InventoryManager.GetItemCount(1,true) > 0) {
 						Invoke ("Restart", restartLevelDelay);
 
 						//Disable the player object since level is over.
 						enabled = false;
 					}
-					else {*/
-					playerNotice.text = "THE BOSS IS STILL ALIVE \n YOU SHALL NOT LEAVE";
-					Destroy (playerNotice, 5);
-						//upon boss death, then allow player to leave
+					else {
+						playerNotice.text = "THE BOSS IS STILL ALIVE \n YOU SHALL NOT LEAVE";
+						Destroy (playerNotice, 5);
+							//upon boss death, then allow player to leave
 					}
-				else {
+				} else {
 					//Invoke the Restart function to start the next level with a delay of restartLevelDelay (default 1 second).
 					Invoke ("Restart", restartLevelDelay);
 				

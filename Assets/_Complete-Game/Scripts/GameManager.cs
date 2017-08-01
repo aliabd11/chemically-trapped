@@ -164,7 +164,7 @@ namespace Completed
 				//http://www.physics4kids.com/files/mod_fission.html
 				bossText = GameObject.Find ("BossBattleText").GetComponent<Text> ();
 				bossText.text = "TRY TO ESCAPE:\n\n TIME IS TICKING!" +
-					"(HINT: Now I am become death, destroyer of worlds.)";
+					"(HINT: Split the atom.)";
 
 				//experimentText = GameObject.Find ("ExperimentDetails").GetComponent<Text> ();
 				itemPickupText = GameObject.Find("ItemPickup").GetComponent<Text>();
@@ -205,12 +205,16 @@ namespace Completed
 			levelImage.SetActive (true);
 
 			//Call the HideLevelImage function with a delay in seconds of levelStartDelay.
-			if (instance.level == 3) {
-				Invoke ("HideLevelImage", 6);
+			if (instance.level == 2) {
+				Invoke ("HideLevelImage", 7);
 			}
-			else if (instance.level == 5) {
-				Invoke ("HideLevelImage", 6);
+			else if (instance.level == 3) {
+				Invoke ("HideLevelImage", 7);
 			}
+			else if (instance.level == 4) {
+				Invoke ("HideLevelImage", 7);
+			}
+
 			else {
 				Invoke ("HideLevelImage", levelStartDelay);
 			}

@@ -34,11 +34,14 @@ namespace Completed
 		public GameObject[] floorTiles;									//Array of floor prefabs.
 		public GameObject[] wallTiles;									//Array of wall prefabs.
 		public GameObject[] foodTiles;									//Array of food prefabs.
+		public GameObject[] foodTiles1;									//Array of food prefabs.
+		public GameObject[] foodTiles2;									//Array of food prefabs.
 		public GameObject[] enemyTiles;									//Array of enemy prefabs.
 		public GameObject[] bossoneenemyTiles;								//Array of bossenemy prefabs.
 		public GameObject[] bosstwoenemyTiles;								//Array of bossenemy prefabs.
 		public GameObject[] bossthreenemyTiles;								//Array of bossenemy prefabs.
-
+		public GameObject[] bossfourenemyTiles;								//Array of bossenemy prefabs.
+		public GameObject[] bossfiveenemyTiles;								//Array of bossenemy prefabs.
 		public GameObject[] outerWallTiles;								//Array of outer tile prefabs.
 		
 		private Transform boardHolder;									//A variable to store a reference to the transform of our Board object.
@@ -145,7 +148,13 @@ namespace Completed
 			LayoutObjectAtRandom (wallTiles, wallCount.minimum, wallCount.maximum);
 			
 			//Instantiate a random number of food tiles based on minimum and maximum, at randomized positions.
-			LayoutObjectAtRandom (foodTiles, foodCount.minimum + 4, foodCount.maximum + 4);
+
+			if (GameManager.instance.level == 1) {
+				LayoutObjectAtRandom (foodTiles1, foodCount.minimum + 4, foodCount.maximum + 4);
+			} else if (GameManager.instance.level == 2) {
+				LayoutObjectAtRandom (foodTiles2, foodCount.minimum + 4, foodCount.maximum + 4);
+			}
+			//LayoutObjectAtRandom (foodTiles, foodCount.minimum + 4, foodCount.maximum + 4);
 			
 			//Determine number of enemies based on current level number, based on a logarithmic progression
 			int enemyCount = (int)Mathf.Log(level, 2f);
@@ -164,6 +173,10 @@ namespace Completed
 				LayoutObjectAtRandom (bosstwoenemyTiles, enemyCount, enemyCount);
 			} else if (GameManager.instance.level == 4) {
 				LayoutObjectAtRandom (bossthreenemyTiles, enemyCount, enemyCount);
+			} else if (GameManager.instance.level == 5) {
+				LayoutObjectAtRandom (bossfourenemyTiles, enemyCount, enemyCount);
+			} else if (GameManager.instance.level == 6) {
+				LayoutObjectAtRandom (bossfiveenemyTiles, enemyCount, enemyCount);
 			} else {
 				LayoutObjectAtRandom (enemyTiles, enemyCount, enemyCount);
 			}

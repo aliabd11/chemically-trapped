@@ -226,7 +226,7 @@ namespace Completed
 			if(other.tag == "Exit")
 			{
 
-				if (GameManager.instance.level == 1) {
+				if (GameManager.instance.level == 7) {
 					if (Devdog.InventoryPro.InventoryManager.GetItemCount(1,true) > 0) {
 						Invoke ("Restart", restartLevelDelay);
 

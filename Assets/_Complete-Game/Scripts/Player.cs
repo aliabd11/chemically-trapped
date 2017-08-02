@@ -250,7 +250,42 @@ namespace Completed
 						Destroy (playerNotice, 5);
 						//upon boss death, then allow player to leave
 					}
-				} else {
+				} 
+				else if (GameManager.instance.level == 4) {
+					if ((Devdog.InventoryPro.InventoryManager.GetItemCount (23, true) > 0)
+						|| (Devdog.InventoryPro.InventoryManager.GetItemCount (21, true) > 0)) {
+						Invoke ("Restart", restartLevelDelay);
+
+						//Disable the player object since level is over.
+						enabled = false;
+					} else {
+						playerNotice.text = "SOLVE THE PUZZLE OR \n YOU SHALL NOT LEAVE";
+						Destroy (playerNotice, 5);
+						//upon boss death, then allow player to leave
+					}
+				} else if (GameManager.instance.level == 5) {
+					if ((Devdog.InventoryPro.InventoryManager.GetItemCount (25, true) > 0)
+						|| (Devdog.InventoryPro.InventoryManager.GetItemCount (30, true) > 0)) {
+						Invoke ("Restart", restartLevelDelay);
+
+						//Disable the player object since level is over.
+						enabled = false;
+					} else {
+						playerNotice.text = "SOLVE THE PUZZLE OR \n YOU SHALL NOT LEAVE";
+						Destroy (playerNotice, 5);
+						//upon boss death, then allow player to leave
+					}
+				} else if (GameManager.instance.level == 6) {
+					if (Devdog.InventoryPro.InventoryManager.GetItemCount (10, true) > 0) {
+						GameManager.instance.GameWin ();
+					} else {
+						playerNotice.text = "SOLVE THE PUZZLE OR \n YOU SHALL NOT LEAVE";
+						Destroy (playerNotice, 5);
+						//upon boss death, then allow player to leave
+					}
+				} 
+
+				else {
 					//Invoke the Restart function to start the next level with a delay of restartLevelDelay (default 1 second).
 					Invoke ("Restart", restartLevelDelay);
 				
@@ -310,6 +345,32 @@ namespace Completed
 				
 				//Disable the food object the player collided with.
 			}			
+
+			else if(other.tag == "Sodium")
+			{
+				foodText.text = "Press 'f' to pick up";
+
+				//Add pointsPerOxygen to the players current food total.
+				if (press_down) {
+					food += pointsPerOxygen;
+					numHydrogen++;
+					other.gameObject.SetActive (false);
+					foodText.text = "Oxygen: +" + pointsPerOxygen + " Life: " + food;
+
+					inventory.AddItem(1);
+
+					press_down = false;
+				}
+
+				//Update foodText to represent current total and notify player that they gained points
+				itemPickupText.text = "Item Pickup Details: \n You got sodium! \n\n Soft and highly reactive. \n Chemical symbol: Na \n Atomic number: 11 \n An alkali metal.";
+
+				//Call the RandomizeSfx function of SoundManager and pass in two eating sounds to choose between to play the eating sound effect.
+				SoundManager.instance.RandomizeSfx (eatSound1, eatSound2);
+
+				//Disable the food object the player collided with.
+			}			
+
 			
 		}
 		

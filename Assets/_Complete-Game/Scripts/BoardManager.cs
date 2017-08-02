@@ -36,6 +36,10 @@ namespace Completed
 		public GameObject[] foodTiles;									//Array of food prefabs.
 		public GameObject[] foodTiles1;									//Array of food prefabs.
 		public GameObject[] foodTiles2;									//Array of food prefabs.
+		public GameObject[] foodTiles3;									//Array of food prefabs.
+		public GameObject[] foodTiles4;									//Array of food prefabs.
+		public GameObject[] foodTiles5;									//Array of food prefabs.
+
 		public GameObject[] enemyTiles;									//Array of enemy prefabs.
 		public GameObject[] bossoneenemyTiles;								//Array of bossenemy prefabs.
 		public GameObject[] bosstwoenemyTiles;								//Array of bossenemy prefabs.
@@ -118,7 +122,7 @@ namespace Completed
 		void LayoutObjectAtRandom (GameObject[] tileArray, int minimum, int maximum)
 		{
 			//Choose a random number of objects to instantiate within the minimum and maximum limits
-			int objectCount = Random.Range (minimum, maximum+1);
+			int objectCount = Random.Range (minimum, maximum+1) + 4;
 			
 			//Instantiate objects until the randomly chosen limit objectCount is reached
 			for(int i = 0; i < objectCount; i++)
@@ -150,9 +154,15 @@ namespace Completed
 			//Instantiate a random number of food tiles based on minimum and maximum, at randomized positions.
 
 			if (GameManager.instance.level == 2) {
-				LayoutObjectAtRandom (foodTiles1, foodCount.minimum + 4, foodCount.maximum + 4);
+				LayoutObjectAtRandom (foodTiles1, foodCount.minimum + 6, foodCount.maximum + 6);
 			} else if (GameManager.instance.level == 3) {
-				LayoutObjectAtRandom (foodTiles2, foodCount.minimum + 4, foodCount.maximum + 4);
+				LayoutObjectAtRandom (foodTiles2, foodCount.minimum + 6, foodCount.maximum + 6);
+			} else if (GameManager.instance.level == 4) {
+				LayoutObjectAtRandom (foodTiles3, foodCount.minimum + 6, foodCount.maximum + 6);
+			} else if (GameManager.instance.level == 5) {
+				LayoutObjectAtRandom (foodTiles4, foodCount.minimum + 6, foodCount.maximum + 6);
+			} else if (GameManager.instance.level == 6) {
+				LayoutObjectAtRandom (foodTiles5, foodCount.minimum + 4, foodCount.maximum + 4);
 			}
 			//LayoutObjectAtRandom (foodTiles, foodCount.minimum + 4, foodCount.maximum + 4);
 			

@@ -254,7 +254,32 @@ namespace Completed
             playerFoodPoints = 100;
             level = 0;
         }
-		
+
+		public void GameWin()
+		{
+			//Set levelText to display number of levels passed and game over message
+			levelText.text = "You've defeated phase 1 of the game !";
+			//Invoke("HideLevelImage", levelStartDelay);
+
+			//Enable black background image gameObject.
+			levelImage.SetActive(true);
+
+			//Disable this GameManager.
+			enabled = false;
+
+
+			gameOver = true;
+
+			restartText.text = "Press 'R' for Restart";
+			restart = true;
+
+			bossText.text = "";
+
+
+			playerFoodPoints = 100;
+			level = 0;
+		}
+
 		//Coroutine to move enemies in sequence.
 		IEnumerator MoveEnemies()
 		{

@@ -149,9 +149,9 @@ namespace Completed
 			
 			//Instantiate a random number of food tiles based on minimum and maximum, at randomized positions.
 
-			if (GameManager.instance.level == 1) {
+			if (GameManager.instance.level == 2) {
 				LayoutObjectAtRandom (foodTiles1, foodCount.minimum + 4, foodCount.maximum + 4);
-			} else if (GameManager.instance.level == 2) {
+			} else if (GameManager.instance.level == 3) {
 				LayoutObjectAtRandom (foodTiles2, foodCount.minimum + 4, foodCount.maximum + 4);
 			}
 			//LayoutObjectAtRandom (foodTiles, foodCount.minimum + 4, foodCount.maximum + 4);

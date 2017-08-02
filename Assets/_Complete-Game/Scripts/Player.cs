@@ -226,17 +226,29 @@ namespace Completed
 			if(other.tag == "Exit")
 			{
 
-				if (GameManager.instance.level == 7) {
-					if (Devdog.InventoryPro.InventoryManager.GetItemCount(1,true) > 0) {
+				if (GameManager.instance.level == 2) {
+					if ((Devdog.InventoryPro.InventoryManager.GetItemCount (11, true) > 0)
+					    || (Devdog.InventoryPro.InventoryManager.GetItemCount (4, true) > 0)) {
 						Invoke ("Restart", restartLevelDelay);
 
 						//Disable the player object since level is over.
 						enabled = false;
-					}
-					else {
-						playerNotice.text = "THE BOSS IS STILL ALIVE \n YOU SHALL NOT LEAVE";
+					} else {
+						playerNotice.text = "SOLVE THE PUZZLE OR \n YOU SHALL NOT LEAVE";
 						Destroy (playerNotice, 5);
-							//upon boss death, then allow player to leave
+						//upon boss death, then allow player to leave
+					}
+				} else if (GameManager.instance.level == 3) {
+					if ((Devdog.InventoryPro.InventoryManager.GetItemCount (14, true) > 0)
+					    || (Devdog.InventoryPro.InventoryManager.GetItemCount (17, true) > 0)) {
+						Invoke ("Restart", restartLevelDelay);
+
+						//Disable the player object since level is over.
+						enabled = false;
+					} else {
+						playerNotice.text = "SOLVE THE PUZZLE OR \n YOU SHALL NOT LEAVE";
+						Destroy (playerNotice, 5);
+						//upon boss death, then allow player to leave
 					}
 				} else {
 					//Invoke the Restart function to start the next level with a delay of restartLevelDelay (default 1 second).

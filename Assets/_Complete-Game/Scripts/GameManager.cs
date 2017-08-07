@@ -11,7 +11,7 @@ namespace Completed
 	{
 		public float levelStartDelay = 2f;						//Time to wait before starting level, in seconds.
 		public float turnDelay = 0.1f;							//Delay between each Player turn.
-		public int playerFoodPoints = 250;						//Starting value for Player food points.
+		public int playerFoodPoints = 300;						//Starting value for Player food points.
         public int playerNumOxygen = 0;
         public int playerNumHydrogen = 0;
 		public static GameManager instance = null;				//Static instance of GameManager which allows it to be accessed by any other script.

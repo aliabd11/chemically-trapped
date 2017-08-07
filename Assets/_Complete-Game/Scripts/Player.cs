@@ -164,8 +164,13 @@ namespace Completed
 			} else if (GameManager.instance.level == 4) {
 				itemPickupText.text = @"**********" +"\n\nA single displacement reaction: " + "This reaction is characterized by one element being displaced from a compound by another element." +
 					"A + BC -> AC + B \n\n Zn + 2 HCl → ZnCl2 + H2\n\n";
+			} else if (GameManager.instance.level == 5) {
+				itemPickupText.text = @"**********" +"\n\nA double displacement reaction: " + "In this reaction, two compounds react and the positive ions (cation) and the negative ions (anion) of the two reactants switch places, forming two new compounds or products" +
+					"A^+B^- + C^+D^- -> A^+D^- + C^+B^- \n\n HF + NaOH = NaF + H20\n\n";
+			} else if (GameManager.instance.level == 6) {
+				itemPickupText.text = @"**********" +"\n\nBreak free of the laboratory: " + "Perform nuclear fusion using uranium and the atom splitter" +
+					"A uranium-235 atom absorbs a neutron and fissions into two new atoms (fission fragments) \n\n ESCAPE!\n\n";
 			}
-
 		}
 		
 		//AttemptMove overrides the AttemptMove function in the base class MovingObject

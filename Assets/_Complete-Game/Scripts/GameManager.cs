@@ -112,6 +112,9 @@ namespace Completed
 
 			} else if (instance.level == 6) {
 				bossText = GameObject.Find ("BossBattleText").GetComponent<Text> ();
+				bossText.text = "PERFORM A COMBUSTION REACTION TO ESCAPE!";
+			} else if (instance.level == 7) {
+				bossText = GameObject.Find ("BossBattleText").GetComponent<Text> ();
 				bossText.text = "PERFORM NUCLEAR FISSION TO ESCAPE!";
 			} 
 
@@ -245,8 +248,8 @@ namespace Completed
 
             gameOver = true;
 
-            restartText.text = "Press 'R' for Restart";
-            restart = true;
+            //restartText.text = "Press 'R' for Restart";
+            //restart = true;
 
             bossText.text = "";
             
@@ -257,6 +260,8 @@ namespace Completed
 
 		public void GameWin()
 		{
+			gameObject.GetComponent<ParticleSystem> ().Play ();
+
 			//Set levelText to display number of levels passed and game over message
 			levelText.text = "You've defeated phase 1 of the game !";
 			//Invoke("HideLevelImage", levelStartDelay);

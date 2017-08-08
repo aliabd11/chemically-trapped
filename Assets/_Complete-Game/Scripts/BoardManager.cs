@@ -39,6 +39,7 @@ namespace Completed
 		public GameObject[] foodTiles3;									//Array of food prefabs.
 		public GameObject[] foodTiles4;									//Array of food prefabs.
 		public GameObject[] foodTiles5;									//Array of food prefabs.
+		public GameObject[] foodTiles6;									//Array of food prefabs.
 
 		public GameObject[] enemyTiles;									//Array of enemy prefabs.
 		public GameObject[] bossoneenemyTiles;								//Array of bossenemy prefabs.
@@ -46,6 +47,8 @@ namespace Completed
 		public GameObject[] bossthreenemyTiles;								//Array of bossenemy prefabs.
 		public GameObject[] bossfourenemyTiles;								//Array of bossenemy prefabs.
 		public GameObject[] bossfiveenemyTiles;								//Array of bossenemy prefabs.
+		public GameObject[] bosssixenemyTiles;								//Array of bossenemy prefabs.
+
 		public GameObject[] outerWallTiles;								//Array of outer tile prefabs.
 		
 		private Transform boardHolder;									//A variable to store a reference to the transform of our Board object.
@@ -163,6 +166,8 @@ namespace Completed
 				LayoutObjectAtRandom (foodTiles4, foodCount.minimum + 6, foodCount.maximum + 6);
 			} else if (GameManager.instance.level == 6) {
 				LayoutObjectAtRandom (foodTiles5, foodCount.minimum + 4, foodCount.maximum + 4);
+			} else if (GameManager.instance.level == 7) {
+				LayoutObjectAtRandom (foodTiles6, foodCount.minimum + 4, foodCount.maximum + 4);
 			}
 			//LayoutObjectAtRandom (foodTiles, foodCount.minimum + 4, foodCount.maximum + 4);
 			
@@ -187,6 +192,8 @@ namespace Completed
 				LayoutObjectAtRandom (bossfourenemyTiles, enemyCount, enemyCount);
 			} else if (GameManager.instance.level == 6) {
 				LayoutObjectAtRandom (bossfiveenemyTiles, enemyCount, enemyCount);
+			} else if (GameManager.instance.level == 7) {
+				LayoutObjectAtRandom (bosssixenemyTiles, enemyCount, enemyCount);
 			} else {
 				LayoutObjectAtRandom (enemyTiles, enemyCount, enemyCount);
 			}

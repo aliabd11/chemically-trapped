@@ -260,7 +260,7 @@ namespace Completed
 
 		public void GameWin()
 		{
-			gameObject.GetComponent<ParticleSystem> ().Play ();
+			//gameObject.GetComponent<ParticleSystem> ().Play ();
 
 			//Set levelText to display number of levels passed and game over message
 			levelText.text = "You've defeated phase 1 of the game !";

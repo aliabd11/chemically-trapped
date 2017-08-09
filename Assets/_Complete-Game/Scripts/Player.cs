@@ -153,25 +153,27 @@ namespace Completed
 			}
 
 			if (GameManager.instance.level == 2) {
-				itemPickupText.text = "@**********" + "\n\nA direct combination/synthesis reaction: " +
-					"A + B -> AB \n\n" + " In this reaction, two or more chemical species combine to form a more complex product." +
-					" 2 H2(g) + O2(g) → 2 H2O(g)\n" + 
-					" 2 CO(g) + O2(g) → 2CO2(g) \n\n3 H2(g) + N2(g) → 2 NH3(g)";
-			} else if (GameManager.instance.level == 3) {
-				itemPickupText.text = @"**********" +"\n\nA chemical decomposition reaction: " + " In this reaction, a compound is broken down into smaller chemical species" +
-					"AB -> A + B \n\n 2 H2O → 2 H2 + O2\n\n" + 
-					" 2 KClO3 → 2 KCl + 3 O2";
-			} else if (GameManager.instance.level == 4) {
-				itemPickupText.text = @"**********" +"\n\nA single displacement reaction: " + "This reaction is characterized by one element being displaced from a compound by another element." +
-					"A + BC -> AC + B \n\n Zn + 2 HCl → ZnCl2 + H2\n\n";
-			} else if (GameManager.instance.level == 5) {
-				itemPickupText.text = @"**********" +"\n\nAU double displacement reaction: " + "In this reaction, two compounds react and the positive ions (cation) and the negative ions (anion) of the two reactants switch places, forming two new compounds or products" +
-					"A^+B^- + C^+D^- -> A^+D^- + C^+B^- \n\n HF + NaOH = NaF + H20\n\n";
+				itemPickupText.text = "@**********" + "\n\n<color=#0000E1FF>A direct combination/ synthesis reaction: </color>\n " +
+                    "<color=#FFFFFFFF>A + B -> AB </color> \n\n" + " In this reaction, two or more chemical reactants combine to form a more complex product.\n\n" +
+                    "For example:\n\n" +
+                    " 2 H2(g) + O2(g) → 2 H2O(g)\n\nOR \n\n" +
+                    " 2 CO(g) + O2(g) → 2CO2(g) \n\nOR \n\n3 H2(g) + N2(g) → 2 NH3(g)\n\n" +
+                    "Make one to pass the level.";
+            } else if (GameManager.instance.level == 3) {
+				itemPickupText.text = @"**********" + "\n\n<color=#0000E1FF>A chemical decomposition reaction:</color> " + " In this reaction, a compound is broken down into smaller chemical species\n" +
+                    "<color=#FFFFFFFF>AB -> A + B</color> \n\nFor example:\n\n 2 H2O → 2 H2 + O2\n\nOR\n\n" +
+                    " 2 KClO3 → 2 KCl + 3 O2\n\n" + "Make one to pass the level.";
+            } else if (GameManager.instance.level == 4) {
+				itemPickupText.text = @"**********" + "\n\n<color=#0000E1FF>A single displacement reaction:</color> " + "This reaction is characterized by one element being displaced from a compound by another element.\n" +
+                    "<color=#FFFFFFFF>A + BC -> AC + B</color> \n\nFor example:\n\n Zn + 2 HCl → ZnCl2 + H2\n\n" + "Press 'C' for other options. Make one to pass the level.";
+            } else if (GameManager.instance.level == 5) {
+				itemPickupText.text = @"**********" + "\n\n<color=#0000E1FF>A double displacement reaction: </color>" + "In this reaction, two compounds react and the positive ions (cation) and the negative ions (anion) of the two reactants switch places, forming two new compounds or products." +
+                    "<color=#FFFFFFFF>A^+B^- + C^+D^- -> A^+D^- + C^+B^- </color> \n\nFor example:\n\n HF + NaOH = NaF + H20\n\nMake this to pass the level.";
 			} else if (GameManager.instance.level == 6) {
-				itemPickupText.text = @"**********" +"\n\nA combustion reaction: " + "This usually occurs when a hydrocarbon reacts with oxygen to produce carbon dioxide and water" +
-					"CH4 + O2 -> H20 + CO2 \n\n C5H12 + O2 -> H2O + CO2\n\n";
+				itemPickupText.text = @"**********" + "\n\n<color=#0000E1FF>A combustion reaction: </color>" + "This usually occurs when a hydrocarbon reacts with oxygen to produce carbon dioxide and water.\n\n" +
+					"For example:\n\nCH4 + O2 -> H20 + CO2 \n\n C5H12 + O2 -> H2O + CO2\n\n";
 			} else if (GameManager.instance.level == 7) {
-				itemPickupText.text = @"**********" +"\n\nBreak free of the laboratory: " + "Perform nuclear fusion using uranium and the atom splitter" +
+				itemPickupText.text = @"**********" +"\n\nBreak free of the laboratory: " + "Perform <color=#0000E1FF>nuclear fusion</color> using uranium and the atom splitter" +
 					"A uranium-235 atom absorbs a neutron and fissions into two new atoms (fission fragments) \n\n ESCAPE!\n\n";
 			}
 		}
@@ -317,14 +319,15 @@ namespace Completed
 			//Check if the tag of the trigger collided with is Soda.
 			else if(other.tag == "Hydrogen")
 			{
-				foodText.text = "Press 'f' to pick up";
+				//foodText.text = "Press 'f' to pick up";
 
 				//Add pointsPerHydrogen to players food points total
 				if (press_down) {
 					food += pointsPerHydrogen;
 					numOxygen++;
 					other.gameObject.SetActive (false);
-					foodText.text = "Hydrogen: +" + pointsPerHydrogen + " Life: " + food;
+					
+                    //foodText.text = "Hydrogen: +" + pointsPerHydrogen + " Life: " + food;
 
                     inventory.AddItem(0);
 
@@ -332,7 +335,7 @@ namespace Completed
 				}
 				
 				//Update foodText to represent current total and notify player that they gained points
-				itemPickupText.text = "Item Pickup Details: \n You got hydrogen! \n\n Most abundant chemical substance in the universe ! \n Chemical symbol: H \n Atomic number: 1 \n Lightest element on the periodic table";
+				//itemPickupText.text = "Item Pickup Details: \n You got hydrogen! \n\n Most abundant chemical substance in the universe ! \n Chemical symbol: H \n Atomic number: 1 \n Lightest element on the periodic table";
 
                 //Call the RandomizeSfx function of SoundManager and pass in two drinking sounds to choose between to play the drinking sound effect.
                 SoundManager.instance.RandomizeSfx (drinkSound1, drinkSound2);
@@ -343,14 +346,15 @@ namespace Completed
 			//Check if the tag of the trigger collided with is Food.
 			else if(other.tag == "Oxygen")
 			{
-				foodText.text = "Press 'f' to pick up";
+				//foodText.text = "Press 'f' to pick up";
 
 				//Add pointsPerOxygen to the players current food total.
 				if (press_down) {
 					food += pointsPerOxygen;
 					numHydrogen++;
 					other.gameObject.SetActive (false);
-					foodText.text = "Oxygen: +" + pointsPerOxygen + " Life: " + food;
+					
+                    //foodText.text = "Oxygen: +" + pointsPerOxygen + " Life: " + food;
 
                     inventory.AddItem(1);
 
@@ -358,7 +362,7 @@ namespace Completed
 				}
 
 				//Update foodText to represent current total and notify player that they gained points
-				itemPickupText.text = "Item Pickup Details: \n You got oxygen! \n\n Crucial part to life as we know it \n Chemical symbol: O \n Atomic number: 8 \n Third-most abundant element in the universe";
+				//itemPickupText.text = "Item Pickup Details: \n You got oxygen! \n\n Crucial part to life as we know it \n Chemical symbol: O \n Atomic number: 8 \n Third-most abundant element in the universe";
 
                 //Call the RandomizeSfx function of SoundManager and pass in two eating sounds to choose between to play the eating sound effect.
                 SoundManager.instance.RandomizeSfx (eatSound1, eatSound2);
@@ -368,14 +372,15 @@ namespace Completed
 
 			else if(other.tag == "Sodium")
 			{
-				foodText.text = "Press 'f' to pick up";
+				//foodText.text = "Press 'f' to pick up";
 
 				//Add pointsPerOxygen to the players current food total.
 				if (press_down) {
 					food += pointsPerOxygen;
 					numHydrogen++;
 					other.gameObject.SetActive (false);
-					foodText.text = "Oxygen: +" + pointsPerOxygen + " Life: " + food;
+
+                    //foodText.text = "Oxygen: +" + pointsPerOxygen + " Life: " + food;
 
 					inventory.AddItem(1);
 
@@ -383,7 +388,7 @@ namespace Completed
 				}
 
 				//Update foodText to represent current total and notify player that they gained points
-				itemPickupText.text = "Item Pickup Details: \n You got sodium! \n\n Soft and highly reactive. \n Chemical symbol: Na \n Atomic number: 11 \n An alkali metal.";
+				//itemPickupText.text = "Item Pickup Details: \n You got sodium! \n\n Soft and highly reactive. \n Chemical symbol: Na \n Atomic number: 11 \n An alkali metal.";
 
 				//Call the RandomizeSfx function of SoundManager and pass in two eating sounds to choose between to play the eating sound effect.
 				SoundManager.instance.RandomizeSfx (eatSound1, eatSound2);
